@@ -1,6 +1,5 @@
 var epidemicData = null
 var cityName = ''
-// var bar = null
 var barBox = document.getElementById('bar_box')
 
 // 测试数据
@@ -211,7 +210,7 @@ var rumorData = [
         "date": "2020-08-19",
         "title": "大数据显示，新冠并没有造成更多人死亡",
         "explain": "谣言",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/7tJ7zKNSRcPN2SumvWkVwj?imageView2/2/w/150/h/90",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/7tJ7zKNSRcPN2SumvWkVwj?",
         "markstyle": "fake",
         "url": "https://vp.fact.qq.com/article?id=52a7cb98ec05cb2dcd682d8730fdf277",
         "desc": "作者提供的每一个图表或说法，都有离谱的错误或编造的痕迹。实际上，疫情期间美国总死亡人数比正常年份高出了15%以上。\n作者宣称“英国死亡人数无异常”，实际上错误解读了数据。根据英国权威媒体统计，在疫情高峰期，英国的死亡率上升了45%。\n流传文章关于美国这部分，很大程度其实是翻译改写自一篇不靠谱的美国博客文章——除了宣扬错误数据和结论外，还拒绝疫苗。而中文译者在原文的基础上以个人喜好加上了诸多离谱想象。\n作者宣称瑞典在社会运转如常的情况下，取得了理想的防疫成绩。实际上：瑞典是欧洲最后一批走出疫情的国家；瑞典并非不检测、不隔离、不收治；瑞典的新冠死亡率在国情类似的北欧国家中显得非常高。",
@@ -429,8 +428,10 @@ $(document).ready(function () {
 
     // 点击关闭柱状图
     $('#close').click(function () {
-        $('.china').show(500)
-        $('#bar_box').fadeOut(300)
+        $('#bar_box').fadeOut(100)
+        $('.china').animate({
+            top: 50 + '%'
+        }, 300)
         clearInterval(bar_timer)
     })
 
@@ -461,6 +462,25 @@ $(document).ready(function () {
         document.removeEventListener('mousedown', this)
         document.removeEventListener('mousemove', this)
     }
+
+    $("body").delegate("#rumorInfo>i", "click", function () {
+        let index = $(this).index();
+        $("#rumor_dat").html("时间：" + rumorData[index].date);
+        $("#rumor_title").html(rumorData[index].title);
+        $("#rumor_explain").html("说明：" + rumorData[index].explain);
+        $("#rumor_img").attr("src", rumorData[index].imgsrc);
+        $("#rumor_desc").html("描述：" + rumorData[index].desc);
+        $("#rumorInfo").fadeOut(300);
+        console.log(index);
+        $("#rumor_Det").fadeIn(500);
+    })
+    //   点击关闭谣言详情
+    $('#rumor_close').click(function () {
+        $('#rumor_Det').fadeOut(300)
+        $('#rumorInfo').fadeIn(500)
+    })
+
+    
 });
 
 function saveHandler() {
@@ -591,9 +611,25 @@ function getStyle(obj, name) {
         // 把【柱状图】渲染到盒子中，并且【传参】配置数据
         bar(cityArr);
         // 动画部分
-        $(".china").fadeOut(300);
-        $('#bar_box').show(500);
-        // tween(barBox, { 'opacity': 100 }, 50)
+        // $(".china").fadeOut(300);
+        // $('#bar_box').fadeIn(500);
+        $(".china").animate({
+            left: 30 + '%'
+        }, 350, function () {
+            $(this).animate({
+                left: 70 + '%'
+            }, 350, function () {
+                $(this).animate({
+                    left: 50 + '%'
+                }, 350, function () {
+                    $(this).animate({
+                        top: 150 + '%'
+                    }, 300, function () {
+                        $('#bar_box').fadeIn(1000);
+                    })
+                })
+            })
+        });
     });
 })();
 
@@ -825,25 +861,6 @@ function RandomNumBoth(Min, Max) {
     var num = Min + Math.round(Rand * Range); //四舍五入
     return num;
 }
-
-$("#main_2 i").click(function () {
-    let index = $(this).index();
-    $("#rumor_dat").html("时间：" + rumorData[index].date);
-    $("#rumor_title").html("标题：" + rumorData[index].title);
-    $("#rumor_explain").html("说明：" + rumorData[index].explain);
-    $("#rumor_img").attr("src", rumorData[index].imgsrc);
-    $("#rumor_desc").html("描述：" + rumorData[index].desc);
-    $("#rumorInfo").fadeOut(300);
-    console.log(index);
-    $("#rumor_Det").fadeIn(500);
-})
-//   点击关闭谣言详情
-$('#rumor_close').click(function () {
-    $('#rumor_Det').fadeOut(300)
-    // $("#rumorInfo>i>span").remove();
-    // randomRumor();
-    $('#rumorInfo').fadeIn(500)
-})
 
 var t = null;
 t = setTimeout(time, 0); //開始运行

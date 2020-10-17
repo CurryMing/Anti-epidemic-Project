@@ -220,16 +220,18 @@ header #showtime {
 }
 
 .china {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     margin: 15px auto 0;
     width: 1000px;
     height: 600px;
 }
 #bar_box {
     display: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 50px auto 0;
     width: 800px;
     height: 600px;
 }
@@ -285,12 +287,11 @@ header #showtime {
     margin-top: 100PX;
 }
 
-#main_2 i {
-    /* width: 320px; */
+#rumorInfo i {
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
     height: 200px;
     display: inline-block;
-    transition: all 0.1s ease-in-out;
 }
 
 #main_2 span {
@@ -301,10 +302,8 @@ header #showtime {
 
 #rumor_Det {
     display: none;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
+    position: relative;
+    margin: 50px auto;
     width: 800px;
 }
 
@@ -329,4 +328,31 @@ header #showtime {
 
 #rumor_Det #rumor_close:hover {
     transform: rotateZ(90deg);
+}
+
+#rumorInfo i:hover {
+    transform: scale(1.2,1.2);
+}
+
+/*  */
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 42px !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 80px !important;
+    }
+}
+
+#rumor_Det p{
+    text-align: left;
+    margin:10px 0 10px;
+    line-height: 30px;
+}
+#rumor_Det #rumor_title{
+    text-align: center;
+    font-size: 20px;
 }
