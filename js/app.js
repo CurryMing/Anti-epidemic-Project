@@ -2,7 +2,7 @@ var epidemicData = null
 var cityName = ''
 var barBox = document.getElementById('bar_box')
 
-// 测试数据sssssssssss
+// 测试数据sssssssssss55555
 var gdData = [
     {
         "cityName": "广州",
