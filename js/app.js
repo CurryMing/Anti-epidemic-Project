@@ -3,6 +3,9 @@ var cityName = ''
 var barBox = document.getElementById('bar_box')
 var bar_timer = null
 
+// 是否可以刷新
+var canRefresh = true
+
 // 云浮数据
 var yunFuData =
 {
@@ -27,7 +30,213 @@ var dongShaData =
 }
 // 广东省数据
 var gdObj = {}
-var gdData = []
+var gdData = [
+    {
+        "cityName": "云浮",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 0,
+        "suspectedCount": 0,
+        "curedCount": 0,
+        "deadCount": 0,
+        "locationId": 0
+    },
+    {
+        "cityName": "东沙群岛",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 0,
+        "suspectedCount": 0,
+        "curedCount": 0,
+        "deadCount": 0,
+        "locationId": 0
+    },
+    {
+        "cityName": "广州",
+        "currentConfirmedCount": 38,
+        "confirmedCount": 773,
+        "suspectedCount": 9,
+        "curedCount": 734,
+        "deadCount": 1,
+        "locationId": 440100
+    },
+    {
+        "cityName": "佛山",
+        "currentConfirmedCount": 1,
+        "confirmedCount": 102,
+        "suspectedCount": 1,
+        "curedCount": 101,
+        "deadCount": 0,
+        "locationId": 440600
+    },
+    {
+        "cityName": "东莞",
+        "currentConfirmedCount": 1,
+        "confirmedCount": 101,
+        "suspectedCount": 0,
+        "curedCount": 99,
+        "deadCount": 1,
+        "locationId": 441900
+    },
+    {
+        "cityName": "深圳",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 471,
+        "suspectedCount": 1,
+        "curedCount": 468,
+        "deadCount": 3,
+        "locationId": 440300
+    },
+    {
+        "cityName": "珠海",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 110,
+        "suspectedCount": 1,
+        "curedCount": 109,
+        "deadCount": 1,
+        "locationId": 440400
+    },
+    {
+        "cityName": "中山",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 69,
+        "suspectedCount": 0,
+        "curedCount": 69,
+        "deadCount": 0,
+        "locationId": 442000
+    },
+    {
+        "cityName": "惠州",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 62,
+        "suspectedCount": 0,
+        "curedCount": 62,
+        "deadCount": 0,
+        "locationId": 441300
+    },
+    {
+        "cityName": "湛江",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 30,
+        "suspectedCount": 2,
+        "curedCount": 30,
+        "deadCount": 0,
+        "locationId": 440800
+    },
+    {
+        "cityName": "汕头",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 26,
+        "suspectedCount": 0,
+        "curedCount": 26,
+        "deadCount": 0,
+        "locationId": 440500
+    },
+    {
+        "cityName": "江门",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 24,
+        "suspectedCount": 0,
+        "curedCount": 24,
+        "deadCount": 0,
+        "locationId": 440700
+    },
+    {
+        "cityName": "肇庆",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 20,
+        "suspectedCount": 0,
+        "curedCount": 19,
+        "deadCount": 1,
+        "locationId": 441200
+    },
+    {
+        "cityName": "梅州",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 17,
+        "suspectedCount": 0,
+        "curedCount": 17,
+        "deadCount": 0,
+        "locationId": 441400
+    },
+    {
+        "cityName": "阳江",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 14,
+        "suspectedCount": 0,
+        "curedCount": 14,
+        "deadCount": 0,
+        "locationId": 441700
+    },
+    {
+        "cityName": "茂名",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 14,
+        "suspectedCount": 0,
+        "curedCount": 14,
+        "deadCount": 0,
+        "locationId": 440900
+    },
+    {
+        "cityName": "清远",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 12,
+        "suspectedCount": 0,
+        "curedCount": 12,
+        "deadCount": 0,
+        "locationId": 441800
+    },
+    {
+        "cityName": "揭阳",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 11,
+        "suspectedCount": 0,
+        "curedCount": 11,
+        "deadCount": 0,
+        "locationId": 445200
+    },
+    {
+        "cityName": "韶关",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 10,
+        "suspectedCount": 0,
+        "curedCount": 9,
+        "deadCount": 1,
+        "locationId": 440200
+    },
+    {
+        "cityName": "潮州",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 7,
+        "suspectedCount": 0,
+        "curedCount": 7,
+        "deadCount": 0,
+        "locationId": 445100
+    },
+    {
+        "cityName": "汕尾",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 6,
+        "suspectedCount": 0,
+        "curedCount": 6,
+        "deadCount": 0,
+        "locationId": 441500
+    },
+    {
+        "cityName": "河源",
+        "currentConfirmedCount": 0,
+        "confirmedCount": 5,
+        "suspectedCount": 0,
+        "curedCount": 5,
+        "deadCount": 0,
+        "locationId": 441600
+    }
+]
+// 如果缓存有数据就拿过来
+// localStorage.setItem('gdData', JSON.stringify(gdData))
+// 字符串转为数组
+if(localStorage.getItem("gdData") != null){
+    gdData = JSON.parse(localStorage.getItem('gdData'))
+}
+console.log(gdData)
 
 var posIndex = 0
 var rumorData = [
@@ -236,7 +445,21 @@ $(document).ready(function () {
         tween(scrollBox, { 'left': scrollWidth * pageNum }, 10)
     })
 
-    $('#arrow').click(function () {
+    setTimeout(function () {
+        $('#coverBG').css({ 'animation': 'coverTween 3s ease-in-out infinite' })
+    }, 3000)
+
+    // 是否可以刷新
+    var refreshDate = new Date();
+    var h = refreshDate.getHours();
+    if (h >= 8 && h <= 21) {
+        canRefresh = true
+        console.log(canRefresh);
+    } else {
+        canRefresh = false
+        console.log(canRefresh);
+    }
+    if (canRefresh) {
         $.get("http://api.tianapi.com/txapi/ncovcity/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
             function (data, status) {
                 epidemicData = data
@@ -244,16 +467,19 @@ $(document).ready(function () {
                 gdData = gdObj[0].cities
                 gdData.push(yunFuData)
                 gdData.push(dongShaData)
+                localStorage.setItem('gdData', JSON.stringify(gdData))
                 console.log(gdData);
+
                 // saveHandler()
                 // $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
-                // alert("状态码：" + data.code + "\n消息：" + data.msg);
+                alert("状态码：" + data.code + "\n消息：" + data.msg);
                 // $('p').text(data.newslist[0])
             });
-        setTimeout(function () {
-            chinaMap()
-        }, 1000)
-    })
+    }
+
+    setTimeout(function () {
+        chinaMap()
+    }, 1000)
 
     // ‘散布’谣言
     randomRumor()
@@ -273,8 +499,10 @@ $(document).ready(function () {
         $('#coverBG').css({ 'left': -scrollWidth })
         setTimeout(function () {
             $('#cover').css({ 'display': 'none' })
+            $('#showtime').css({ 'animation': 'showtimeTween 1s ease-in-out', 'animation-fill-mode': 'forwards' })
         }, 1000)
     })
+
     var startX = 0, startY = 0, endX = 0, endY = 0
     document.addEventListener('mousedown', function (event) {
         startX = event.clientX
@@ -289,6 +517,7 @@ $(document).ready(function () {
             $('#coverBG').css({ 'left': -scrollWidth })
             setTimeout(function () {
                 $('#cover').css({ 'display': 'none' })
+                $('#showtime').css({ 'animation': 'showtimeTween 1s ease-in-out', 'animation-fill-mode': 'forwards' })
             }, 1000)
         }
         document.removeEventListener('mousedown', this)
@@ -455,7 +684,7 @@ function chinaMap() {
                     left: 50 + '%'
                 }, 350, function () {
                     $(this).animate({
-                        top: 150 + '%'
+                        top: 1000 + 'px'
                     }, 300, function () {
                         $('#bar_box').fadeIn(1000);
                     })
@@ -672,19 +901,8 @@ function time() {
     var h = dt.getHours(); //获取时
     var m = dt.getMinutes(); //获取分
     var s = dt.getSeconds(); //获取秒
-    showtime.innerHTML =
-        y +
-        "年" +
-        mt +
-        "月" +
-        todouble(day) +
-        "日-" +
-        todouble(h) +
-        "时" +
-        todouble(m) +
-        "分" +
-        todouble(s) +
-        "秒";
+    $('#showtime #p1').html(y + '年' + mt + '月' + todouble(day) + '日')
+    $('#showtime #p2').html(todouble(h) + ':' + todouble(m) + ':' + todouble(s))
     t = setTimeout(time, 1000); //设定定时器，循环运行
 }
 
