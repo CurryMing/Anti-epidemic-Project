@@ -1,208 +1,34 @@
 var epidemicData = null
 var cityName = ''
 var barBox = document.getElementById('bar_box')
+var bar_timer = null
 
-// 测试数据
-var gdData = [
-    {
-        "cityName": "广州",
-        "currentConfirmedCount": 24,
-        "confirmedCount": 747,
-        "suspectedCount": 9,
-        "curedCount": 722,
-        "deadCount": 1,
-        "locationId": 440100
-    },
-    {
-        "cityName": "湛江",
-        "currentConfirmedCount": 2,
-        "confirmedCount": 30,
-        "suspectedCount": 2,
-        "curedCount": 28,
-        "deadCount": 0,
-        "locationId": 440800
-    },
-    {
-        "cityName": "佛山",
-        "currentConfirmedCount": 1,
-        "confirmedCount": 102,
-        "suspectedCount": 1,
-        "curedCount": 101,
-        "deadCount": 0,
-        "locationId": 440600
-    },
-    {
-        "cityName": "东莞",
-        "currentConfirmedCount": 1,
-        "confirmedCount": 101,
-        "suspectedCount": 0,
-        "curedCount": 99,
-        "deadCount": 1,
-        "locationId": 441900
-    },
-    {
-        "cityName": "深圳",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 471,
-        "suspectedCount": 1,
-        "curedCount": 468,
-        "deadCount": 3,
-        "locationId": 440300
-    },
-    {
-        "cityName": "珠海",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 110,
-        "suspectedCount": 1,
-        "curedCount": 109,
-        "deadCount": 1,
-        "locationId": 440400
-    },
-    {
-        "cityName": "中山",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 69,
-        "suspectedCount": 0,
-        "curedCount": 69,
-        "deadCount": 0,
-        "locationId": 442000
-    },
-    {
-        "cityName": "惠州",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 62,
-        "suspectedCount": 0,
-        "curedCount": 62,
-        "deadCount": 0,
-        "locationId": 441300
-    },
-    {
-        "cityName": "汕头",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 26,
-        "suspectedCount": 0,
-        "curedCount": 26,
-        "deadCount": 0,
-        "locationId": 440500
-    },
-    {
-        "cityName": "江门",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 24,
-        "suspectedCount": 0,
-        "curedCount": 24,
-        "deadCount": 0,
-        "locationId": 440700
-    },
-    {
-        "cityName": "肇庆",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 20,
-        "suspectedCount": 0,
-        "curedCount": 19,
-        "deadCount": 1,
-        "locationId": 441200
-    },
-    {
-        "cityName": "梅州",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 17,
-        "suspectedCount": 0,
-        "curedCount": 17,
-        "deadCount": 0,
-        "locationId": 441400
-    },
-    {
-        "cityName": "阳江",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 14,
-        "suspectedCount": 0,
-        "curedCount": 14,
-        "deadCount": 0,
-        "locationId": 441700
-    },
-    {
-        "cityName": "茂名",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 14,
-        "suspectedCount": 0,
-        "curedCount": 14,
-        "deadCount": 0,
-        "locationId": 440900
-    },
-    {
-        "cityName": "清远",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 12,
-        "suspectedCount": 0,
-        "curedCount": 12,
-        "deadCount": 0,
-        "locationId": 441800
-    },
-    {
-        "cityName": "揭阳",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 11,
-        "suspectedCount": 0,
-        "curedCount": 11,
-        "deadCount": 0,
-        "locationId": 445200
-    },
-    {
-        "cityName": "韶关",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 10,
-        "suspectedCount": 0,
-        "curedCount": 9,
-        "deadCount": 1,
-        "locationId": 440200
-    },
-    {
-        "cityName": "潮州",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 7,
-        "suspectedCount": 0,
-        "curedCount": 7,
-        "deadCount": 0,
-        "locationId": 445100
-    },
-    {
-        "cityName": "汕尾",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 6,
-        "suspectedCount": 0,
-        "curedCount": 6,
-        "deadCount": 0,
-        "locationId": 441500
-    },
-    {
-        "cityName": "河源",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 5,
-        "suspectedCount": 0,
-        "curedCount": 5,
-        "deadCount": 0,
-        "locationId": 441600
-    },
-    {
-        "cityName": "待明确地区",
-        "currentConfirmedCount": -1,
-        "confirmedCount": 0,
-        "suspectedCount": 0,
-        "curedCount": 1,
-        "deadCount": 0,
-        "locationId": 0
-    },
-    {
-        "cityName": "云浮",
-        "currentConfirmedCount": 0,
-        "confirmedCount": 0,
-        "suspectedCount": 0,
-        "curedCount": 0,
-        "deadCount": 0,
-        "locationId": 0
-    },
-]
+// 云浮数据
+var yunFuData =
+{
+    "cityName": "云浮",
+    "currentConfirmedCount": 0,
+    "confirmedCount": 0,
+    "suspectedCount": 0,
+    "curedCount": 0,
+    "deadCount": 0,
+    "locationId": 0
+}
+// 东沙群岛
+var dongShaData =
+{
+    "cityName": "东沙群岛",
+    "currentConfirmedCount": 0,
+    "confirmedCount": 0,
+    "suspectedCount": 0,
+    "curedCount": 0,
+    "deadCount": 0,
+    "locationId": 0
+}
+// 广东省数据
+var gdObj = {}
+var gdData = []
+
 var posIndex = 0
 var rumorData = [
     {
@@ -372,7 +198,6 @@ var posList = [
     },
 ]
 
-
 $(document).ready(function () {
 
     var pageNum = 0
@@ -411,17 +236,24 @@ $(document).ready(function () {
         tween(scrollBox, { 'left': scrollWidth * pageNum }, 10)
     })
 
-    $("button").click(function () {
-        // $.get("http://api.tianapi.com/txapi/ncovcity/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
-        //     function (data, status) {
-        //         epidemicData = data
-        //         console.log(data);
-        //         saveHandler()
-        //         // $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
-        //         // alert("状态码：" + data.code + "\n消息：" + data.msg);
-        //         // $('p').text(data.newslist[0])
-        //     });
-    });
+    $('#arrow').click(function () {
+        $.get("http://api.tianapi.com/txapi/ncovcity/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
+            function (data, status) {
+                epidemicData = data
+                gdObj = data.newslist.filter(i => i.provinceName.includes('广东'))
+                gdData = gdObj[0].cities
+                gdData.push(yunFuData)
+                gdData.push(dongShaData)
+                console.log(gdData);
+                // saveHandler()
+                // $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
+                // alert("状态码：" + data.code + "\n消息：" + data.msg);
+                // $('p').text(data.newslist[0])
+            });
+        setTimeout(function () {
+            chinaMap()
+        }, 1000)
+    })
 
     // ‘散布’谣言
     randomRumor()
@@ -480,7 +312,7 @@ $(document).ready(function () {
         $('#rumorInfo').fadeIn(500)
     })
 
-    
+
 });
 
 function saveHandler() {
@@ -496,7 +328,7 @@ function getStyle(obj, name) {
 }
 
 // 地图
-(function () {
+function chinaMap() {
     // 初始化e-charts
     var myChart = echarts.init(document.querySelector(".china"));
 
@@ -509,10 +341,10 @@ function getStyle(obj, name) {
             var newData = gdData.filter(i => item.properties.name.includes(i.cityName))
             var newValue = 0
             if (newData.length !== 0) {
-                newValue = newData[0].confirmedCount
+                newValue = newData[0].currentConfirmedCount
             }
             return {
-                value: "确诊人数：" + newValue,
+                value: "现有确诊：" + newValue,
                 name: item.properties.name
             }
         });
@@ -579,12 +411,12 @@ function getStyle(obj, name) {
             }],
         }
         myChart.setOption(option);
-        // showTips('广州市');
+        showTips('广州市');
     })
     // 默认鼠标移出canvas后显示广州的tooltip信息
     myChart.on("globalout", () => {
         setTimeout(() => {
-            // showTips('广州市')
+            showTips('广州市')
         }, 5000)
     })
 
@@ -631,7 +463,7 @@ function getStyle(obj, name) {
             })
         });
     });
-})();
+}
 
 // 柱状图
 function bar(cityArr) {
@@ -768,12 +600,13 @@ function bar(cityArr) {
         clearInterval(bar_timer)
     })
     // 移出，恢复自动查看
-    myChart.on('mouseout', function () {
+    myChart.on('globalout', function () {
         tmdBar()
     })
 
     // 自动预览柱状图
     function tmdBar() {
+        clearInterval(bar_timer)
         bar_timer = setInterval(function () {
             var dataLen = option.series[0].data.length;
 
@@ -800,7 +633,7 @@ function bar(cityArr) {
     }
 };
 
-// 散布谣言1
+// 散布谣言
 function randomRumor() {
     // 遍历谣言数据
     rumorData.forEach(item => {
@@ -821,40 +654,6 @@ function randomRumor() {
     })
 }
 
-// 散布谣言2
-/*function randomRumor() {
-    // 遍历谣言数据
-    rumorData.forEach(item => {
-        var rumor_p = document.createElement('p')
-        var rumor_div = document.createElement('div')
-        rumor_p.innerHTML = item.title + "    " + posIndex
-        main_2.appendChild(rumor_div)
-        rumor_div.appendChild(rumor_p)
-
-        randomSize = RandomNumBoth(20, 35)
-        randomX = RandomNumBoth(50, 800)
-        randomY = RandomNumBoth(50, 500)
-        randomDeg = RandomNumBoth(-20, 20)
-        var degStr1 = posList[posIndex].deg + 'deg'
-        var degStr = randomDeg + 'deg'
-
-        rumor_p.style.fontSize = randomSize + 'px'
-        // rumor_p.style.transform = "rotate(" + degStr1 + ")";
-
-        $('#main_2 div').css({ 'position': 'absolute' })
-        // $('#main_2 div').css({ 'width': '500px','height': '200px'})
-
-        rumor_div.style.color = '#fff'
-        rumor_div.style.fontSize = randomSize + 'px'
-        rumor_div.style.left = posList[posIndex].posX
-        rumor_div.style.top = posList[posIndex].posY
-        
-        rumor_div.style.transform = "rotate(" + degStr1 + ")";
-        rumor_div.style.backgroundColor = 'rgba(0,0,0,0.15)'
-        posIndex++
-    })
-}
-*/
 function RandomNumBoth(Min, Max) {
     var Range = Max - Min;
     var Rand = Math.random();
@@ -874,7 +673,6 @@ function time() {
     var m = dt.getMinutes(); //获取分
     var s = dt.getSeconds(); //获取秒
     showtime.innerHTML =
-        "当前时间：" +
         y +
         "年" +
         mt +

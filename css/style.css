@@ -288,16 +288,20 @@ header #showtime {
 }
 
 #rumorInfo i {
+    font-style: normal;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
     height: 200px;
     display: inline-block;
 }
 
 #main_2 span {
+    cursor: pointer;
     display: inline-block;
     font-size: 16px;
     color: #fff;
+}
+#rumorInfo i:hover{
+    transform: scale(1.2,1.2);
 }
 
 #rumor_Det {
@@ -328,10 +332,6 @@ header #showtime {
 
 #rumor_Det #rumor_close:hover {
     transform: rotateZ(90deg);
-}
-
-#rumorInfo i:hover {
-    transform: scale(1.2,1.2);
 }
 
 /*  */
