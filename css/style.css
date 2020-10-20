@@ -11,6 +11,7 @@
 html,
 body {
     height: 100%;
+    overflow: auto;
 }
 
 body {
@@ -84,6 +85,10 @@ li {
     animation-fill-mode: forwards;
 }
 
+#coverBG #desc p {
+    letter-spacing: 2px;
+    line-height: 30px;
+}
 #coverBG #desc #p1 {
     font-size: 25px;
     margin-bottom: 10px;
@@ -91,7 +96,6 @@ li {
 
 #coverBG #desc #p2 {
     font-size: 16px;
-    letter-spacing: 2px;
 }
 
 #coverBG #arrow {
@@ -193,7 +197,7 @@ svg {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(25deg, #1e2b53, #23507c, #2079a8, #06a3d6);
+    background-image: -webkit-linear-gradient(25deg, #1e2b53, #23507c, #2079a8, #06a3d6);
 }
 
 header {
@@ -211,13 +215,28 @@ header h1 {
     font-size: 35px;
     font-weight: 600;
     width: 500px;
+    cursor: pointer;
+    color: transparent;
+}
+header h1::after{
+    content: "“技”高一筹 “疫”无所获";
+    font-size: 35px;
+	color: gold;
+	color: transparent;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: -webkit-linear-gradient(left,yellow,#4cd137,#00d2d3,yellow,#00d2d3,#2e86de,#4cd137,#2e86de);
+	
+    background-clip: text;
+	-webkit-background-clip: text;  /*兼容*/
 }
 
 header #showtime {
     padding: 5px;
     width: 150px;
     height: 50px;
-    border: 2px solid #00D2C7;
+    border: 3px solid #03afa7;
     border-radius: 5px;
     position: absolute;
     bottom: 200px;
@@ -229,7 +248,7 @@ header #showtime span {
     width: 3px;
     height: 20px;
     border-radius: 20px;
-    background-color: #00D2C7;
+    background-color: #03afa7;
 }
 header #showtime #column01 {
     left: 5px;

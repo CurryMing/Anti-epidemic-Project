@@ -3,8 +3,16 @@ var cityName = ''
 var barBox = document.getElementById('bar_box')
 var bar_timer = null
 
-// 是否可以刷新
+// 是否可以刷新，记录刷新时间
 var canRefresh = true
+var refreshDay = 0
+var refreshHours = 0
+if (localStorage.getItem('refreshDay') != null) {
+    refreshDay = localStorage.getItem('refreshDay')
+}
+if (localStorage.getItem('refreshHours') != null) {
+    refreshHours = localStorage.getItem('refreshHours')
+}
 
 // 云浮数据
 var yunFuData =
@@ -233,11 +241,12 @@ var gdData = [
 // 如果缓存有数据就拿过来
 // localStorage.setItem('gdData', JSON.stringify(gdData))
 // 字符串转为数组
-if(localStorage.getItem("gdData") != null){
+if (localStorage.getItem("gdData") != null) {
     gdData = JSON.parse(localStorage.getItem('gdData'))
 }
-console.log(gdData)
+// console.log(gdData)
 
+// 谣言
 var posIndex = 0
 var rumorData = [
     {
@@ -351,62 +360,14 @@ var rumorData = [
         "author": "武汉市互联网信息办公室"
     }
 ]
-
-// 谣言
+if (localStorage.getItem("rumorData") != null) {
+    rumorData = JSON.parse(localStorage.getItem('rumorData'))
+    // console.log(rumorData);
+}
 var randomSize = 0
-var posList = [
-    {
-        posX: 50 + 'px',
-        posY: 100 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 100 + 'px',
-        posY: 350 + 'px',
-        deg: '25'
-    },
-    {
-        posX: 60 + 'px',
-        posY: 500 + 'px',
-        deg: '30'
-    },
-    {
-        posX: 600 + 'px',
-        posY: 500 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 950 + 'px',
-        posY: 480 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 600 + 'px',
-        posY: 100 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 250 + 'px',
-        posY: 250 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 800 + 'px',
-        posY: 250 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 900 + 'px',
-        posY: 100 + 'px',
-        deg: '20'
-    },
-    {
-        posX: 500 + 'px',
-        posY: 180 + 'px',
-        deg: '20'
-    },
-]
 
+
+// 入口函数
 $(document).ready(function () {
 
     var pageNum = 0
@@ -445,21 +406,33 @@ $(document).ready(function () {
         tween(scrollBox, { 'left': scrollWidth * pageNum }, 10)
     })
 
+    // 等封面标题出现后，才触发动画
     setTimeout(function () {
         $('#coverBG').css({ 'animation': 'coverTween 3s ease-in-out infinite' })
     }, 3000)
 
+    // 点击标题，返回封面
+    $('.box header h1').click(function () {
+        window.location.reload()
+    })
+
     // 是否可以刷新
     var refreshDate = new Date();
+    var day = refreshDate.getDate();
     var h = refreshDate.getHours();
-    if (h >= 8 && h <= 21) {
-        canRefresh = true
-        console.log(canRefresh);
-    } else {
-        canRefresh = false
-        console.log(canRefresh);
+    // 刷新日期不是当天，不可以再次刷新
+    if (day !== refreshDay) {
+        if ((h - refreshHours) >= 10) {
+            canRefresh = true
+            console.log("可以刷新？: " + canRefresh);
+        } else {
+            canRefresh = false
+            console.log("可以刷新？: " + canRefresh);
+        }
     }
+    canRefresh = false
     if (canRefresh) {
+        // 获取城市疫情数据
         $.get("http://api.tianapi.com/txapi/ncovcity/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
             function (data, status) {
                 epidemicData = data
@@ -467,16 +440,25 @@ $(document).ready(function () {
                 gdData = gdObj[0].cities
                 gdData.push(yunFuData)
                 gdData.push(dongShaData)
+                localStorage.setItem('refreshDay', day)
+                localStorage.setItem('refreshHours', h)
                 localStorage.setItem('gdData', JSON.stringify(gdData))
                 console.log(gdData);
 
                 // saveHandler()
-                // $('#result').append(JSON.stringify(data)); //返回内容绑定到ID为result的标签
-                alert("状态码：" + data.code + "\n消息：" + data.msg);
-                // $('p').text(data.newslist[0])
+                // alert("状态码：" + data.code + "\n消息：" + data.msg);
+            });
+        // 获取谣言数据
+        $.get("http://api.tianapi.com/txapi/rumour/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
+            function (data, status) {
+                rumorData = data.newslist
+                localStorage.setItem('rumorData', JSON.stringify(rumorData))
+                // console.log(data);
+                // alert("状态码：" + data.code + "\n消息：" + data.msg);
             });
     }
 
+    // 渲染中国地图
     setTimeout(function () {
         chinaMap()
     }, 1000)
@@ -493,7 +475,7 @@ $(document).ready(function () {
         clearInterval(bar_timer)
     })
 
-    // 向左拖拽划走封面
+    // 向左点击（或者拖拽）划走封面
     $('#arrow').click(function () {
         $('#coverBG').css({ 'animation': 'coverBG 0s ease-in-out' })
         $('#coverBG').css({ 'left': -scrollWidth })
@@ -502,13 +484,11 @@ $(document).ready(function () {
             $('#showtime').css({ 'animation': 'showtimeTween 1s ease-in-out', 'animation-fill-mode': 'forwards' })
         }, 1000)
     })
-
     var startX = 0, startY = 0, endX = 0, endY = 0
     document.addEventListener('mousedown', function (event) {
         startX = event.clientX
         startY = event.clientY
     })
-
     document.onmouseup = function (event) {
         endX = event.clientX
         endY = event.clientY
@@ -528,11 +508,12 @@ $(document).ready(function () {
         let index = $(this).index();
         $("#rumor_dat").html("时间：" + rumorData[index].date);
         $("#rumor_title").html(rumorData[index].title);
+        $("#rumor_author").html("作者：" + rumorData[index].author);
         $("#rumor_explain").html("说明：" + rumorData[index].explain);
         $("#rumor_img").attr("src", rumorData[index].imgsrc);
         $("#rumor_desc").html("描述：" + rumorData[index].desc);
         $("#rumorInfo").fadeOut(300);
-        console.log(index);
+        // console.log(index);
         $("#rumor_Det").fadeIn(500);
     })
     //   点击关闭谣言详情
