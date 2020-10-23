@@ -392,8 +392,10 @@ $(document).ready(function () {
 
     navRight.click(function () {
         pageNum++
-        if (pageNum >= 2) {
-            pageNum = 1
+        if (pageNum >= 3) {
+            pageNum = 0
+            tween(scrollBox, { 'left': -scrollWidth * pageNum }, 0)
+            return;
         }
         tween(scrollBox, { 'left': -scrollWidth * pageNum }, 10)
 
@@ -403,9 +405,28 @@ $(document).ready(function () {
         if (pageNum <= 0) {
             pageNum = 0
         }
-        tween(scrollBox, { 'left': scrollWidth * pageNum }, 10)
+        tween(scrollBox, { 'left': -scrollWidth * pageNum }, 10)
+        console.log(pageNum);
     })
 
+    //导航点击
+    $("#mapbtn").click(function () {
+        pageNum = 0
+        tween(scrollBox, { 'left': scrollWidth * pageNum }, 10)
+    }
+    )
+
+    $("#rumorbtn").click(function () {
+        pageNum = 1
+        tween(scrollBox, { 'left': -scrollWidth * pageNum }, 10)
+    }
+    )
+
+    $("#tracebtn").click(function () {
+        pageNum = 2
+        tween(scrollBox, { 'left': - scrollWidth * pageNum }, 10)
+    }
+    )
     // 等封面标题出现后，才触发动画
     setTimeout(function () {
         $('#coverBG').css({ 'animation': 'coverTween 3s ease-in-out infinite' })
@@ -421,8 +442,8 @@ $(document).ready(function () {
     var day = refreshDate.getDate();
     var h = refreshDate.getHours();
     // 刷新日期不是当天，不可以再次刷新
-    if (day !== refreshDay) {
-        if ((h - refreshHours) >= 10) {
+    if (day !== localStorage.getItem("refreshDay")) {
+        if ((h - localStorage.getItem("refreshHours")) >= 10) {
             canRefresh = true
             console.log("可以刷新？: " + canRefresh);
         } else {
@@ -457,11 +478,12 @@ $(document).ready(function () {
                 // alert("状态码：" + data.code + "\n消息：" + data.msg);
             });
     }
+    //获取疫情同程
 
     // 渲染中国地图
     setTimeout(function () {
         chinaMap()
-    }, 1000)
+    }, 500)
 
     // ‘散布’谣言
     randomRumor()
@@ -594,7 +616,9 @@ function chinaMap() {
                 },
                 // selectedMode: 'single',
                 itemStyle: {
+                    //原来0E95F1
                     areaColor: '#0E95F1',
+                    //原来e9e9e9
                     borderColor: '#e9e9e9',
                     borderWidth: 1,
                     shadowColor: '#0E95F1',
@@ -607,7 +631,7 @@ function chinaMap() {
                         fontSize: 10
                     },
                     itemStyle: {
-                        areaColor: '#FFD181',
+                        areaColor: '#FFB769',
                         borderColor: '#fff',
                         borderWidth: 1
                     }
@@ -882,7 +906,7 @@ function time() {
     var h = dt.getHours(); //获取时
     var m = dt.getMinutes(); //获取分
     var s = dt.getSeconds(); //获取秒
-    $('#showtime #p1').html(y + '年' + mt + '月' + todouble(day) + '日')
+    $('#showtime #p1').html(y + '年' + todouble(mt) + '月' + todouble(day) + '日')
     $('#showtime #p2').html(todouble(h) + ':' + todouble(m) + ':' + todouble(s))
     t = setTimeout(time, 1000); //设定定时器，循环运行
 }
