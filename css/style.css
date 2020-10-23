@@ -8,7 +8,8 @@
     user-select: none;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow: auto;
 }
@@ -23,10 +24,12 @@ li {
 }
 
 #cover {
+    display: none;
     z-index: 100;
 }
 
-#cover, #coverBG {
+#cover,
+#coverBG {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -48,7 +51,8 @@ li {
     z-index: 1;
 }
 
-#coverBG #title01, #coverBG #title02 {
+#coverBG #title01,
+#coverBG #title02 {
     font-size: 50px;
     position: absolute;
 }
@@ -96,6 +100,21 @@ li {
     font-size: 16px;
 }
 
+#coverBG #tip {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    animation: tip 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes tip {
+    100% {
+        opacity: 1;
+    }
+}
+
 #coverBG #arrow {
     /* background-color: #00D2C7; */
     position: absolute;
@@ -111,7 +130,8 @@ li {
     animation: arrowTween 3s ease-in-out infinite;
 }
 
-#arrow1, #arrow2 {
+#arrow1,
+#arrow2 {
     background-color: #000;
     border: 2px solid #000;
     border-radius: 2px;
@@ -142,6 +162,7 @@ svg {
     80% {
         left: 500px;
     }
+
     100% {
         left: 480px;
     }
@@ -151,6 +172,7 @@ svg {
     80% {
         right: 530px;
     }
+
     100% {
         right: 510px;
     }
@@ -163,18 +185,24 @@ svg {
 }
 
 @keyframes coverTween {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(-15px);
     }
 }
 
 @keyframes arrowTween {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
@@ -233,15 +261,64 @@ header h1::before {
 
 header nav {
     position: absolute;
-    bottom: 25px;
+    bottom: 35px;
     right: 250px;
 }
 
 header nav ul {
-    width: 350px;
+    width: 380px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+header nav #nav-after {
+    width: 100%;
+    left: 0;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #f7f1e3;
+    position: absolute;
+    animation: map-after 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    bottom: -23px;
+}
+
+@keyframes map-after {
+    50% {
+        width: 100%;
+        left: -42.5%;
+    }
+
+    100% {
+        width: 33%;
+        left: 0;
+    }
+}
+
+@keyframes rumor-after {
+    50% {
+        width: 100%;
+        left: 0%;
+    }
+
+    100% {
+        width: 15%;
+        left: 42.5%;
+    }
+}
+
+@keyframes trace-after {
+    50% {
+        width: 100%;
+        left: 42.5%;
+    }
+
+    100% {
+        width: 33%;
+        left: 67%;
+    }
 }
 
 header nav ul li {
@@ -251,7 +328,7 @@ header nav ul li {
 
 header nav ul li i {
     font-style: normal;
-    font-size: 16px;
+    font-size: 17px;
     color: #fff;
 }
 
@@ -314,6 +391,7 @@ header #showtime #p2 {
     80% {
         bottom: 10px;
     }
+
     100% {
         bottom: 20px;
     }
@@ -328,7 +406,8 @@ header #showtime #p2 {
     /* background: rgba(0, 0, 0, .3); */
 }
 
-#navLeft, #navRight {
+#navLeft,
+#navRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -355,7 +434,8 @@ header #showtime #p2 {
     right: 0;
 }
 
-#navLeft span, #navRight span {
+#navLeft span,
+#navRight span {
     width: 30px;
     height: 5px;
     background-color: #fff;
@@ -363,7 +443,8 @@ header #showtime #p2 {
     transition: all 0.1s ease-in-out;
 }
 
-#navLeft #span1, #navRight #span1 {
+#navLeft #span1,
+#navRight #span1 {
     margin-bottom: 13.5px;
 }
 
@@ -446,7 +527,8 @@ header #showtime #p2 {
     transform: rotateZ(90deg);
 }
 
-#close1, #close2 {
+#close1,
+#close2 {
     position: absolute;
     top: 3px;
     right: 12.5px;
@@ -549,7 +631,6 @@ header #showtime #p2 {
 }
 
 /* 头部与main之间的条块 */
-
 .w {
     width: 100%;
     background-color: #c4c4c7;
@@ -560,5 +641,63 @@ header #showtime #p2 {
     width: 100%;
     height: 100%;
     position: relative;
-    text-align: center;
+}
+
+#main_3 #trace-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#main_3 #trace-box #left-nav,
+#main_3 #trace-box #right-nav {
+    position: absolute;
+    width: 165px;
+    height: 100%;
+    opacity: 0;
+    z-index: 5;
+}
+
+#main_3 #trace-box #left-nav {
+    left: 0;
+}
+
+#main_3 #trace-box #right-nav {
+    right: 0;
+}
+
+#trace-scroll-box {
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 5500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+#trace-scroll-box div {
+    flex: 0 0 500px;
+    height: 300px;
+    margin-right: 50px;
+    background-color: rgba(0, 255, 255, 0.3);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+#trace-scroll-box .current-box {
+    transform: scale(1.15, 1.15);
+}
+
+#trace-scroll-box .side-box {
+    filter: blur(3px);
 }
