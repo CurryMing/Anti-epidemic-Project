@@ -370,7 +370,7 @@ var traceData = [
         "no": "CA046",
         "memo": "",
         "no_sub": "",
-        "pos_start": "西班牙马德里",
+        "pos_start": "马德里",
         "pos_end": "杭州",
         "source": "https://weibo.com/2171757642/IDp4Km78D?refer_flag=1001030103_&type=comment#_rnd1586916380620",
         "who": "浙江新闻频道 ",
@@ -387,7 +387,7 @@ var traceData = [
         "no": "CZ0308",
         "memo": "",
         "no_sub": "",
-        "pos_start": "荷兰阿姆斯特丹",
+        "pos_start": "阿姆斯特丹",
         "pos_end": "广州",
         "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
         "who": "广东发布",
@@ -455,7 +455,7 @@ var traceData = [
         "no": "CZ0308",
         "memo": "",
         "no_sub": "",
-        "pos_start": "荷兰阿姆斯特丹",
+        "pos_start": "阿姆斯特丹",
         "pos_end": "广州",
         "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
         "who": "广东发布",
@@ -606,15 +606,15 @@ $(document).ready(function () {
         if (tracePageNum < 0) {
             tracePageNum = 0
             scrollBoxChildren[tracePageNum].classList.add('current-box');
-            scrollBoxChildren[tracePageNum+1].classList.add('side-box');
+            scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
             $('#main_3 #trace-box #left-nav').css({ 'display': 'block' })
             return;
-        }else if(tracePageNum > 0){
-            scrollBoxChildren[tracePageNum-1].classList.add('side-box');
+        } else if (tracePageNum > 0) {
+            scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
         }
         scrollBoxChildren[tracePageNum].classList.add('current-box');
-        
-        scrollBoxChildren[tracePageNum+1].classList.add('side-box');
+
+        scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
         tween(traceScrollBox, {
             left: traceScrollBoxLeft + traceScrollWidth
         }, 10, function () {
@@ -633,15 +633,15 @@ $(document).ready(function () {
         if (tracePageNum > 9) {
             tracePageNum = 9
             scrollBoxChildren[tracePageNum].classList.add('current-box');
-            scrollBoxChildren[tracePageNum-1].classList.add('side-box');
+            scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
             $('#main_3 #trace-box #right-nav').css({ 'display': 'block' })
             return;
-        }else if(tracePageNum < 9){
-            scrollBoxChildren[tracePageNum+1].classList.add('side-box');
+        } else if (tracePageNum < 9) {
+            scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
         }
-        scrollBoxChildren[tracePageNum-1].classList.add('side-box');
+        scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
         scrollBoxChildren[tracePageNum].classList.add('current-box');
-        
+
         tween(traceScrollBox, {
             left: traceScrollBoxLeft - traceScrollWidth
         }, 10, function () {
@@ -1200,6 +1200,29 @@ function RandomNumBoth(Min, Max) {
     var num = Min + Math.round(Rand * Range); //四舍五入
     return num;
 }
+
+//疫情同城查询信息
+tracequery();
+function tracequery() {
+    // 遍历疫情同程信息
+    var m = 1;
+    traceData.forEach((item) => {
+
+        $("#trace-scroll-box div:nth-child(" + m + ") #tracedate").html(item.date);
+        $("#trace-scroll-box div:nth-child(" + m + ") #pos_start").html(item.pos_start);
+        $("#trace-scroll-box div:nth-child(" + m + ") #pos_end").html(item.pos_end);
+        $("#trace-scroll-box div:nth-child(" + m + ") #no").html(item.no);
+        $("#trace-scroll-box div:nth-child(" + m + ") #tracestart").html(item.start);
+        $("#trace-scroll-box div:nth-child(" + m + ") #traceend").html(item.end);
+        $("#trace-scroll-box div:nth-child(" + m + ") #memo").html(item.memo);
+        $("#trace-scroll-box div:nth-child(" + m + ") #who").html(item.who);
+        $("#trace-scroll-box div:nth-child(" + m + ") #creat_time").html(item.created_at);
+        $("#trace-scroll-box div:nth-child(" + m + ") #updated_time").html(item.updated_at);
+        m++
+    });
+}
+
+
 
 var t = null;
 t = setTimeout(time, 0); //開始运行
