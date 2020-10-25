@@ -243,294 +243,306 @@ if (localStorage.getItem("gdData") != null) {
 
 // 谣言
 var posIndex = 0;
-var rumorData = [{
-    id: "52a7cb98ec05cb2dcd682d8730fdf277",
-    date: "2020-08-19",
-    title: "大数据显示，新冠并没有造成更多人死亡",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/7tJ7zKNSRcPN2SumvWkVwj?",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=52a7cb98ec05cb2dcd682d8730fdf277",
-    desc: "作者提供的每一个图表或说法，都有离谱的错误或编造的痕迹。实际上，疫情期间美国总死亡人数比正常年份高出了15%以上。\n作者宣称“英国死亡人数无异常”，实际上错误解读了数据。根据英国权威媒体统计，在疫情高峰期，英国的死亡率上升了45%。\n流传文章关于美国这部分，很大程度其实是翻译改写自一篇不靠谱的美国博客文章——除了宣扬错误数据和结论外，还拒绝疫苗。而中文译者在原文的基础上以个人喜好加上了诸多离谱想象。\n作者宣称瑞典在社会运转如常的情况下，取得了理想的防疫成绩。实际上：瑞典是欧洲最后一批走出疫情的国家；瑞典并非不检测、不隔离、不收治；瑞典的新冠死亡率在国情类似的北欧国家中显得非常高。",
-    author: "国际谣言查证机构",
-},
-{
-    id: "4b2de35c66fdcfd36b8bf3183dec6d73",
-    date: "2020-08-18",
-    title: "普京女儿注射疫苗后高烧不治身亡",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/syDkMCEWzApcypBsrhj1nd?imageView2/2/w/150/h/90",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=4b2de35c66fdcfd36b8bf3183dec6d73",
-    desc: "俄罗斯Tsargrad电视台网站17日报道称，加拿大媒体“今日多伦多”当日发表了一篇俄罗斯总统普京女儿的所谓“独家新闻”，有关注射新冠疫苗后高烧不治身亡的消息，随后删除了这条假新闻。原文是一篇详细但完全虚假的文章。对于特定读者来说，加拿大网站显然创造了一个骗局。",
-    author: "人民日报海外版官方网站",
-},
-{
-    id: "a15fd960093ece8897fae7c76eeb3699",
-    date: "2020-08-16",
-    title: "新冠病毒会感染中耳组织",
-    explain: "尚无定论",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/vK7oWDpbJYG7KBsPpzkTYP?imageView2/2/w/150/h/90",
-    markstyle: "doubt",
-    url: "https://vp.fact.qq.com/article?id=a15fd960093ece8897fae7c76eeb3699",
-    desc: "近日，发表在《美国医学会杂志·耳鼻喉科-头和颈外科学卷》的一项研究中，科研人员从新冠患者尸体的乳突骨及中耳部位检测到了新冠病毒，说明新冠病毒确实可能出现在患者耳部。\n实验中虽然在中耳检测到了新冠病毒，但并不能得出新冠病毒会感染中耳组织的结论。虽然此前也有个别新冠患者出现听力下降症状的报道，但是具体的原因仍不清楚，还需要进行更多的研究。\n耳部出现新冠病毒提示耳鼻喉科医护人员在手术过程中也需要进行额外的防护。不过耳朵并不和外界进行大量气体或物质交换，也不是病毒进行传播的有效途径，所以我们不必过分担心，也无需针对患者的耳部进行格外防护。",
-    author: "韩越",
-},
-{
-    id: "a7faa0054a1a5a45acef142102c4100b",
-    date: "2020-08-13",
-    title: "新冠灭活疫苗已开卖，498元一支，总共打3支",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/bujNi34r78nAT3rFhfeZLe?imageView2/2/w/150/h/90",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=a7faa0054a1a5a45acef142102c4100b",
-    desc: "上观新闻记者致电网传疫苗的生产方北京科兴中维生物技术有限公司，相关负责人表示目前疫苗正在巴西、孟加拉国等国家进行三期临床研究，还没有上市。记者又致电武汉生物制品研究所有限责任公司，相关负责人表示目前疫苗还在临床试验阶段，没有上市。可见，网传两款新冠疫苗都没有上市，不存在一些人员先期接种，在朋友圈兜售就更不可能。\n记者也了解到，疫苗的药品追溯码是100%全覆盖的。处于临床研究的疫苗可以查到追溯码，但有追溯码不代表已上市。",
-    author: "解放日报•上观新闻运营的辟谣新闻和辟谣服务网络平台",
-},
-{
-    id: "d46e41da0bb73fbd37a1cc57acd6fc15",
-    date: "2020-08-13",
-    title: "水是新冠病毒的重大弱点",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/oTWCxzz2bpe4cazPKhG6cp?imageView2/2/w/150/h/90",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=d46e41da0bb73fbd37a1cc57acd6fc15",
-    desc: "报道中的研究发现：室温水可以在24小时内杀死90%的新冠病毒，沸水能“立即且完全”杀死新冠病毒。其实，新冠病毒离开宿主细胞后一定会失去活性这是已知的，“沸水”条件下失活更快也是已知的。至于具体的失活时间，由于没有相关的研究支持，报道内容并不可信。\n报道中还提到氯化水是杀死新冠病毒的“高效”水。其实新冠疫情期间我们一直在使用含氯消毒剂进行消毒，氯化物会影响病毒活性也是已知事实。水本身称不上是“新冠病毒的重大弱点”，俄罗斯科学家的这一发现也算不上是“发现”。",
-    author: "中国科学院生物学博士",
-},
-{
-    id: "c903972979f88432a03619ccb6107457",
-    date: "2020-08-12",
-    title: "新冠疫苗对BMI大于30的人无效",
-    explain: "尚无定论",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/dzBhr1A5W8i3y8dPD9eyRk?imageView2/2/w/150/h/90",
-    markstyle: "doubt",
-    url: "https://vp.fact.qq.com/article?id=c903972979f88432a03619ccb6107457",
-    desc: "新冠疫苗对肥胖者并非完全无效，实际效果有待进一步研究。\n肥胖对于人体健康的危害性不言而喻，肥胖带来的多余组织会对人的呼吸、血液、免疫功能等多个方面产生直接影响。据英国公共卫生部门的研究，肥胖是COVID-19导致住院率和死亡风险增加的重要原因。\n有研究认为，肥胖能降低疫苗的免疫应答反应，但其作用机制还有待更多的数据研究。只能说肥胖可能会影响疫苗的保护效果，这种降低也不是直接把免疫应答反应降为0，即使是应用成熟的疫苗，其防护也无法达到100%。",
-    author: "药理学硕士，知贝儿科药师",
-},
-{
-    id: "91b2fcf6db227583fd10a9f106ba1ad4",
-    date: "2020-08-11",
-    title: "日本流行的新冠病毒株已发生重大突变",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/jBKP2HWqTpJokKB9x7gw8m?imageView2/2/w/150/h/90",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=91b2fcf6db227583fd10a9f106ba1ad4",
-    desc: "日本国立感染症研究所病原体基因组解析研究中心主任黑田诚对新华社记者表示，上述报道是误报。目前日本国内流行的新冠病毒毒株只是在此前欧洲相关基因序列的新冠病毒基础上，进一步发生了6个碱基变异。这一发生少量碱基变异的毒株可能从6月下旬开始从东京向日本全国扩散。\n截至7月16日，研究人员分析了日本国内3600多名新冠病毒感染者以及经航班入境的67名感染者的病毒基因组序列，和世界各地研究人员公布的全球约4.6万名新冠病毒感染者的病毒基因组序列进行了比对。从全球来看，自2019年年末至今年7月的这段时间里，新冠病毒基因组平均随机发生了大约15个碱基变异。",
-    author: "中国国家通讯社",
-},
-{
-    id: "7af61054391822098600d420e46c57c8",
-    date: "2020-08-09",
-    title: "研究发现高个子感染新冠病毒的风险更大",
-    explain: "尚无定论",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/8YomDwTYQXiaT3oY91Ck5Q?imageView2/2/w/150/h/90",
-    markstyle: "doubt",
-    url: "https://vp.fact.qq.com/article?id=7af61054391822098600d420e46c57c8",
-    desc: "网传“高个子感染新冠病毒的风险更大”，但是在相关的论文中，这只是一个芝麻大的发现。从统计学上看，身高与新冠病毒感染风险的相关性也并不显著。\n根据论文，英国高个子感染新冠病毒的风险增加了，而美国的高个子感染风险反而减少了，这两个数据所反映的现象是互相矛盾的。“高个子感染新冠病毒的风险更大”极有可能只是一个随机发生的现象，没有实质性的证据证明它是一个可靠的规律。且该论文未经同行评议，应谨慎看待论文结论。\n身高与新冠感染风险之间的关系本就存疑，用它来支持“新冠病毒通过气溶胶传播”更是荒谬。气溶胶传播的可能性存在，但是不应被过分夸大。",
-    author: "宾夕法尼亚大学医学院病理及实验医药系研究副教授",
-},
-{
-    id: "32bb7d9d8e7a92eb2a910bbba7075f9d",
-    date: "2020-08-03",
-    title: "大连新冠疫情与北京新疆疫情有关联",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/euEu5KhKNFeh3UVvQTzG8s?imageView2/2/w/150/h/90",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=32bb7d9d8e7a92eb2a910bbba7075f9d",
-    desc: "8月3日，大连市政府新闻办召开新闻发布会。大连市政府副秘书长、市卫健委主任赵作伟介绍，本次疫情由境外输入引起的可能性不能排除，来自凯洋公司内外样本的病毒基因序列高度同源，表示本次大连疫情为同一个链条，未发现本次疫情与近期的北京新疆的病例有相关关联的线索。\n病例标本的基因测序结果，显示与我国本土流行的新冠病毒基因型不同，也排除乌鲁木齐新疆北京新发地哈尔滨和绥芬河疫情的关联性。本次疫情可初步排除国内本地病例传播的可能，推测可能是由境外输入引起的。\n",
-    author: "解放日报•上观新闻运营的辟谣新闻和辟谣服务网络平台",
-},
-{
-    id: "9174290456f4093bf263813c41af0719",
-    date: "2020-08-03",
-    title: "又有一种新型病毒在武汉传播",
-    explain: "谣言",
-    imgsrc: "//jiaozhen-70111.picnjc.qpic.cn/sfjA1TRpGCcrMwiraq6vL4?imageView2/2/w/150/h/90",
-    markstyle: "fake",
-    url: "https://vp.fact.qq.com/article?id=9174290456f4093bf263813c41af0719",
-    desc: "经武汉市卫健委核查，此消息为虚假信息。鄂州警方在对案件线索及相关证据查证后，于8月1日将违法人员周某抓获，周某如实交待了其散布谣言的违法行为。",
-    author: "武汉市互联网信息办公室",
-},
+var rumorData = [
+    {
+        "id": "7c47a1e932ab4a0ad72ba92294b99245",
+        "date": "2020-09-15",
+        "title": "9月13日全国新增49名新冠确诊病例，分布多省市",
+        "explain": "谣言",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/ccniumVHEPYdE41NyrneXB?imageView2/2/w/150/h/90",
+        "markstyle": "fake",
+        "url": "https://vp.fact.qq.com/article?id=7c47a1e932ab4a0ad72ba92294b99245",
+        "desc": "网传视频中混淆了无症状感染者和确诊病例的概念，将两者简单相加得出了“新增49名病例”的结论，实际上，49名病例中有39名为无症状感染者，无症状感染者不是确诊病例。\n9月13日的新增确诊病例和无症状感染者均为境外输入。境外入境人员检测、隔离14天的规定一直没变过，所有入境人员从入境到卫生检疫、检测、转运全部是按照规定实行无缝对接和闭环管理，并没有进入社会，确诊患者已分布在全国多地的说法不属实。",
+        "author": "解放日报•上观新闻运营的辟谣新闻和辟谣服务网络平台"
+    },
+    {
+        "id": "60df9d85d6bfa16c628dc3549cded1ff",
+        "date": "2020-09-10",
+        "title": "新冠肺炎男性患者的死亡率更高",
+        "explain": "确实如此",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/2umhxZmfhc2AdEJZwp7xdA?imageView2/2/w/150/h/90",
+        "markstyle": "true",
+        "url": "https://vp.fact.qq.com/article?id=60df9d85d6bfa16c628dc3549cded1ff",
+        "desc": "最近发表于《自然》杂志的一篇论文对男性患者更易因感染新冠而死亡这个问题进行了解释。其中指出，男性患者在感染新冠初期，体内多种免疫细胞因子的表达水平显著高于女性患者，“细胞因子风暴”导致的肺部组织损伤可能是男性重症患者死亡率更高的原因之一。\n科研人员发现的第二个现象是女性对于新冠病毒可以产生更强的免疫反应，在女性感染者体内，最终T细胞的激活和活性都显著的高于男性患者。在此研究的基础上，针对男女患者对于新冠的不同反应，医护人员可以在治疗时采取更加针对的治疗方法，增强治疗效果。",
+        "author": "韩越"
+    },
+    {
+        "id": "96bc42ee0e4e6c96bef3d0df5d42345f",
+        "date": "2020-09-09",
+        "title": "新冠死者平均只损失了几个月的寿命",
+        "explain": "谣言",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/8q9yQ3Cnw84UQkGiCX8Ez3?imageView2/2/w/150/h/90",
+        "markstyle": "fake",
+        "url": "https://vp.fact.qq.com/article?id=96bc42ee0e4e6c96bef3d0df5d42345f",
+        "desc": "认为“只损失数月寿命”的人，是犯了数学上的错误。对在美国业已成功活到78岁的老人来说，其预期寿命并不是78.8岁，而是男性87.8岁，女性89.3岁。也就是说，假如他/她在78岁时因新冠死亡，又没有其它特殊情况，那就会遭受大约10年的寿命损失。",
+        "author": "国际谣言查证机构"
+    },
+    {
+        "id": "343da72d4a0f61b5bf14b2bc58f0c968",
+        "date": "2020-08-29",
+        "title": "人类可能无法对新冠病毒获得持久的免疫保护",
+        "explain": "确实如此",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/mEpZzJ1yAx41ARpFCDwirk?imageView2/2/w/150/h/90",
+        "markstyle": "true",
+        "url": "https://vp.fact.qq.com/article?id=343da72d4a0f61b5bf14b2bc58f0c968",
+        "desc": "麻疹病毒抗体的半衰期很长，只要感染过或接种过疫苗，人体就能持久地产生抗体，这是获得终身免疫的关键。\n流感病毒抗体半衰期较短，只有半年。而且由于流感病毒的种类太多，基因型容易因病毒株间基因交换而出现重大突变，导致免疫保护完全失效，造成大流感。\n有研究表明新冠病毒抗体的半衰期很短，所以我们不太可能对新冠病毒获得持久的免疫保护。但好在目前其亚型少，也还未发生重大突变，人体内还有细胞免疫反应，也许可以一定程度上抵挡新一轮的病毒感染。",
+        "author": "宾夕法尼亚大学医学院病理及实验医药系研究副教授"
+    },
+    {
+        "id": "26269c39baf75de8737ef839f43e0bca",
+        "date": "2020-08-28",
+        "title": "警犬能够准确闻出感染新冠的人",
+        "explain": "尚无定论",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/mCrHa1h7SeafYjP1Az2s1r?imageView2/2/w/150/h/90",
+        "markstyle": "doubt",
+        "url": "https://vp.fact.qq.com/article?id=26269c39baf75de8737ef839f43e0bca",
+        "desc": "研究表明，训练后，狗确实可以嗅出来自新冠患者的唾液样本，且准确率还不差。但在机场，检测犬主要是用来找出无症状感染者。如已经有发烧症状，机场使用额温枪或额温检测设备就可以快速进行排查，没必要用检测犬。但是，目前所报道的实验数据里，都没有明确说明检测犬是否能查出来自无症状感染者的样本，它们很有可能无法发现无症状感染者。\n检测犬能检测少量的样本，不能保证对大量样本进行检测的工作。此外，用来这些狗狗同样有感染新冠的风险。所以检测犬上岗的可靠性存疑，狗狗的安全也是需要考虑的因素。",
+        "author": "宾夕法尼亚大学医学院病理及实验医药系研究副教授"
+    },
+    {
+        "id": "33c1d15df0f1a82864427b100aa24f0c",
+        "date": "2020-08-26",
+        "title": "香港新冠“二次感染”病例意味着群体免疫可能无效",
+        "explain": "确实如此",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/vNDDC5EKwNkB8TFM29QTeY?imageView2/2/w/150/h/90",
+        "markstyle": "true",
+        "url": "https://vp.fact.qq.com/article?id=33c1d15df0f1a82864427b100aa24f0c",
+        "desc": "该香港病例为全球首例康复后二次感染新冠病毒的病例。“二次感染”不是“复阳”，因为该患者第一次和第二次感染的病毒株基因序列并不相同。\n患者为何会二次感染？至少有两种猜测：ADE效应使得患者感染新的病毒株后不能有效抵抗，使病情更加严重。另一原因就是抗体在体内的消失，即患者体内的抗体无法存在很久，导致新的病毒来袭时，患者对它是不设防的。\n该“二次感染”病例提示我们：群体免疫可能是无效的，我们已经无法根除新冠，需要与其长期共存了。其次，疫苗可能无法提供终生保护，我们要通过反复注射来加强免疫，这对疫苗的需求量将更大。虽然当前的“二次感染”病例只是孤例，但这警示新冠康复者也需要保持足够的防疫意识。",
+        "author": "中国科学院生物学博士"
+    },
+    {
+        "id": "aa1530d3d81b7eae8289853752d2da59",
+        "date": "2020-08-20",
+        "title": "印度卫生部长检查基层防疫，不戴口罩者直接扇嘴巴",
+        "explain": "谣言",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/o2V6Xz1YUd2uTXgCZFcvUZ?imageView2/2/w/150/h/90",
+        "markstyle": "fake",
+        "url": "https://vp.fact.qq.com/article?id=aa1530d3d81b7eae8289853752d2da59",
+        "desc": "视频中男子手持话筒上街的肢体动作有些夸张，而卫生部长检查基层防疫本应是严肃的事情，视频让人生疑。\n根据央视新闻对印度卫生部长哈什·瓦尔丹（Harsh Vardhan）的图片报道，与网传视频中男子图片比对后，可以肯定视频中的男子并非印度卫生部长。网络辟谣举报平台记者注意到，网传视频原始出处来自YouTube上《24 News HD》2020年7月24日上传的喜剧类节目，拿着话筒男子系巴基斯坦节目的主持人Sajjad Janni。",
+        "author": "福建日报社东南网承办"
+    },
+    {
+        "id": "52a7cb98ec05cb2dcd682d8730fdf277",
+        "date": "2020-08-19",
+        "title": "大数据显示，新冠并没有造成更多人死亡",
+        "explain": "谣言",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/7tJ7zKNSRcPN2SumvWkVwj?imageView2/2/w/150/h/90",
+        "markstyle": "fake",
+        "url": "https://vp.fact.qq.com/article?id=52a7cb98ec05cb2dcd682d8730fdf277",
+        "desc": "作者提供的每一个图表或说法，都有离谱的错误或编造的痕迹。实际上，疫情期间美国总死亡人数比正常年份高出了15%以上。\n作者宣称“英国死亡人数无异常”，实际上错误解读了数据。根据英国权威媒体统计，在疫情高峰期，英国的死亡率上升了45%。\n流传文章关于美国这部分，很大程度其实是翻译改写自一篇不靠谱的美国博客文章——除了宣扬错误数据和结论外，还拒绝疫苗。而中文译者在原文的基础上以个人喜好加上了诸多离谱想象。\n作者宣称瑞典在社会运转如常的情况下，取得了理想的防疫成绩。实际上：瑞典是欧洲最后一批走出疫情的国家；瑞典并非不检测、不隔离、不收治；瑞典的新冠死亡率在国情类似的北欧国家中显得非常高。",
+        "author": "国际谣言查证机构"
+    },
+    {
+        "id": "4b2de35c66fdcfd36b8bf3183dec6d73",
+        "date": "2020-08-18",
+        "title": "普京女儿注射疫苗后高烧不治身亡",
+        "explain": "谣言",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/syDkMCEWzApcypBsrhj1nd?imageView2/2/w/150/h/90",
+        "markstyle": "fake",
+        "url": "https://vp.fact.qq.com/article?id=4b2de35c66fdcfd36b8bf3183dec6d73",
+        "desc": "俄罗斯Tsargrad电视台网站17日报道称，加拿大媒体“今日多伦多”当日发表了一篇俄罗斯总统普京女儿的所谓“独家新闻”，有关注射新冠疫苗后高烧不治身亡的消息，随后删除了这条假新闻。原文是一篇详细但完全虚假的文章。对于特定读者来说，加拿大网站显然创造了一个骗局。",
+        "author": "人民日报海外版官方网站"
+    },
+    {
+        "id": "a15fd960093ece8897fae7c76eeb3699",
+        "date": "2020-08-16",
+        "title": "新冠病毒会感染中耳组织",
+        "explain": "尚无定论",
+        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/vK7oWDpbJYG7KBsPpzkTYP?imageView2/2/w/150/h/90",
+        "markstyle": "doubt",
+        "url": "https://vp.fact.qq.com/article?id=a15fd960093ece8897fae7c76eeb3699",
+        "desc": "近日，发表在《美国医学会杂志·耳鼻喉科-头和颈外科学卷》的一项研究中，科研人员从新冠患者尸体的乳突骨及中耳部位检测到了新冠病毒，说明新冠病毒确实可能出现在患者耳部。\n实验中虽然在中耳检测到了新冠病毒，但并不能得出新冠病毒会感染中耳组织的结论。虽然此前也有个别新冠患者出现听力下降症状的报道，但是具体的原因仍不清楚，还需要进行更多的研究。\n耳部出现新冠病毒提示耳鼻喉科医护人员在手术过程中也需要进行额外的防护。不过耳朵并不和外界进行大量气体或物质交换，也不是病毒进行传播的有效途径，所以我们不必过分担心，也无需针对患者的耳部进行格外防护。",
+        "author": "韩越"
+    }
 ];
 if (localStorage.getItem("rumorData") != null) {
     rumorData = JSON.parse(localStorage.getItem("rumorData"));
 }
 var randomSize = 0;
+var rumorImg = [
+    { imgSrc: "images/ccniumVHEPYdE41NyrneXB.jfif" },
+    { imgSrc: "images/2umhxZmfhc2AdEJZwp7xdA.jfif" },
+    { imgSrc: "images/8q9yQ3Cnw84UQkGiCX8Ez3.png" },
+    { imgSrc: "images/mEpZzJ1yAx41ARpFCDwirk.jfif" },
+    { imgSrc: "images/mCrHa1h7SeafYjP1Az2s1r.jfif" },
+    { imgSrc: "images/vNDDC5EKwNkB8TFM29QTeY.jfif" },
+    { imgSrc: "images/o2V6Xz1YUd2uTXgCZFcvUZ.png" },
+    { imgSrc: "images/7tJ7zKNSRcPN2SumvWkVwj.jfif" },
+    { imgSrc: "images/syDkMCEWzApcypBsrhj1nd.png" },
+    { imgSrc: "images/vK7oWDpbJYG7KBsPpzkTYP.jfif" },
+]
 
 // 同程
-var traceData = [
-    {
-        "id": 4884,
-        "date": "2020-04-12",
-        "start": "2020/04/12 00:00:00",
-        "end": "2020/04/13 00:00:00",
-        "type": 1,
-        "no": "CA046",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "马德里",
-        "pos_end": "杭州",
-        "source": "https://weibo.com/2171757642/IDp4Km78D?refer_flag=1001030103_&type=comment#_rnd1586916380620",
-        "who": "浙江新闻频道 ",
-        "verified": 1,
-        "created_at": "2020/04/15 10:08:56",
-        "updated_at": "2020/04/16 18:25:51"
-    },
-    {
-        "id": 4875,
-        "date": "2020-04-11",
-        "start": "2020/04/11 00:00:00",
-        "end": "2020/04/11 00:00:00",
-        "type": 1,
-        "no": "CZ0308",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "阿姆斯特丹",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/14 16:31:17",
-        "updated_at": "2020/04/16 18:27:04"
-    },
-    {
-        "id": 4878,
-        "date": "2020-04-11",
-        "start": "2020/04/11 00:00:00",
-        "end": "2020/04/11 00:00:00",
-        "type": 1,
-        "no": "CZ3002",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "纽约",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/14 16:39:16",
-        "updated_at": "2020/04/16 18:26:46"
-    },
-    {
-        "id": 4886,
-        "date": "2020-04-11",
-        "start": "2020/04/11 00:00:00",
-        "end": "2020/04/11 00:00:00",
-        "type": 1,
-        "no": "JD432",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "伦敦",
-        "pos_end": "青岛",
-        "source": "https://weibo.com/1784473157/IDHOieoLi?refer_flag=1001030103_&type=comment#_rnd1587087906952",
-        "who": "中国新闻网",
-        "verified": 1,
-        "created_at": "2020/04/17 09:50:34",
-        "updated_at": "2020/04/17 15:21:54"
-    },
-    {
-        "id": 4868,
-        "date": "2020-04-10",
-        "start": "2020/04/10 00:00:00",
-        "end": "2020/04/10 00:00:00",
-        "type": 1,
-        "no": "SU208",
-        "memo": "该航班60位确诊病例",
-        "no_sub": "",
-        "pos_start": "莫斯科",
-        "pos_end": "上海",
-        "source": "https://weibo.com/1784473157/ID6z8wYl3?refer_flag=1001030103_&type=comment#_rnd1586746313316",
-        "who": "中国新闻网",
-        "verified": 1,
-        "created_at": "2020/04/13 10:55:59",
-        "updated_at": "2020/04/13 16:30:11"
-    },
-    {
-        "id": 4877,
-        "date": "2020-04-10",
-        "start": "2020/04/10 00:00:00",
-        "end": "2020/04/11 00:00:00",
-        "type": 1,
-        "no": "CZ0308",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "阿姆斯特丹",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/14 16:37:43",
-        "updated_at": "2020/04/16 18:26:54"
-    },
-    {
-        "id": 4881,
-        "date": "2020-04-10",
-        "start": "2020/04/10 00:00:00",
-        "end": "2020/04/11 00:00:00",
-        "type": 1,
-        "no": "LQ908",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "柬埔寨金边",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/14 16:43:25",
-        "updated_at": "2020/04/16 18:26:19"
-    },
-    {
-        "id": 4867,
-        "date": "2020-04-08",
-        "start": "2020/04/08 00:00:00",
-        "end": "2020/04/08 00:00:00",
-        "type": 1,
-        "no": "K6668",
-        "memo": "该航班两名同乘患者",
-        "no_sub": "",
-        "pos_start": "柬埔寨金边",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/qxtB0aj_3k5eLoNfWT9WwQ",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/13 10:50:19",
-        "updated_at": "2020/04/13 16:30:24"
-    },
-    {
-        "id": 4863,
-        "date": "2020-04-08",
-        "start": "2020/04/08 00:00:00",
-        "end": "2020/04/08 00:00:00",
-        "type": 1,
-        "no": "CZ0348",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "巴黎",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/fT7oUl_Twl8sn_cHaFj0Iw",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/13 10:39:46",
-        "updated_at": "2020/04/13 16:38:36"
-    },
-    {
-        "id": 4864,
-        "date": "2020-04-07",
-        "start": "2020/04/07 00:00:00",
-        "end": "2020/04/08 00:00:00",
-        "type": 1,
-        "no": "CZ348",
-        "memo": "",
-        "no_sub": "",
-        "pos_start": "巴黎",
-        "pos_end": "广州",
-        "source": "https://mp.weixin.qq.com/s/QapaEh4EZ-t4VsMwtoW7Lg",
-        "who": "广东发布",
-        "verified": 1,
-        "created_at": "2020/04/13 10:42:09",
-        "updated_at": "2020/04/13 16:38:16"
-    }
+var traceData = [{
+    "id": 4884,
+    "date": "2020-04-12",
+    "start": "2020/04/12 00:00:00",
+    "end": "2020/04/13 00:00:00",
+    "type": 1,
+    "no": "CA046",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "马德里",
+    "pos_end": "杭州",
+    "source": "https://weibo.com/2171757642/IDp4Km78D?refer_flag=1001030103_&type=comment#_rnd1586916380620",
+    "who": "浙江新闻频道 ",
+    "verified": 1,
+    "created_at": "2020/04/15 10:08:56",
+    "updated_at": "2020/04/16 18:25:51"
+},
+{
+    "id": 4875,
+    "date": "2020-04-11",
+    "start": "2020/04/11 00:00:00",
+    "end": "2020/04/11 00:00:00",
+    "type": 1,
+    "no": "CZ0308",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "阿姆斯特丹",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/14 16:31:17",
+    "updated_at": "2020/04/16 18:27:04"
+},
+{
+    "id": 4878,
+    "date": "2020-04-11",
+    "start": "2020/04/11 00:00:00",
+    "end": "2020/04/11 00:00:00",
+    "type": 1,
+    "no": "CZ3002",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "纽约",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/14 16:39:16",
+    "updated_at": "2020/04/16 18:26:46"
+},
+{
+    "id": 4886,
+    "date": "2020-04-11",
+    "start": "2020/04/11 00:00:00",
+    "end": "2020/04/11 00:00:00",
+    "type": 1,
+    "no": "JD432",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "伦敦",
+    "pos_end": "青岛",
+    "source": "https://weibo.com/1784473157/IDHOieoLi?refer_flag=1001030103_&type=comment#_rnd1587087906952",
+    "who": "中国新闻网",
+    "verified": 1,
+    "created_at": "2020/04/17 09:50:34",
+    "updated_at": "2020/04/17 15:21:54"
+},
+{
+    "id": 4868,
+    "date": "2020-04-10",
+    "start": "2020/04/10 00:00:00",
+    "end": "2020/04/10 00:00:00",
+    "type": 1,
+    "no": "SU208",
+    "memo": "该航班60位确诊病例",
+    "no_sub": "",
+    "pos_start": "莫斯科",
+    "pos_end": "上海",
+    "source": "https://weibo.com/1784473157/ID6z8wYl3?refer_flag=1001030103_&type=comment#_rnd1586746313316",
+    "who": "中国新闻网",
+    "verified": 1,
+    "created_at": "2020/04/13 10:55:59",
+    "updated_at": "2020/04/13 16:30:11"
+},
+{
+    "id": 4877,
+    "date": "2020-04-10",
+    "start": "2020/04/10 00:00:00",
+    "end": "2020/04/11 00:00:00",
+    "type": 1,
+    "no": "CZ0308",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "阿姆斯特丹",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/14 16:37:43",
+    "updated_at": "2020/04/16 18:26:54"
+},
+{
+    "id": 4881,
+    "date": "2020-04-10",
+    "start": "2020/04/10 00:00:00",
+    "end": "2020/04/11 00:00:00",
+    "type": 1,
+    "no": "LQ908",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "柬埔寨金边",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/W9v_MbolAvgOUOuVq2WRLQ",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/14 16:43:25",
+    "updated_at": "2020/04/16 18:26:19"
+},
+{
+    "id": 4867,
+    "date": "2020-04-08",
+    "start": "2020/04/08 00:00:00",
+    "end": "2020/04/08 00:00:00",
+    "type": 1,
+    "no": "K6668",
+    "memo": "该航班两名同乘患者",
+    "no_sub": "",
+    "pos_start": "柬埔寨金边",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/qxtB0aj_3k5eLoNfWT9WwQ",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/13 10:50:19",
+    "updated_at": "2020/04/13 16:30:24"
+},
+{
+    "id": 4863,
+    "date": "2020-04-08",
+    "start": "2020/04/08 00:00:00",
+    "end": "2020/04/08 00:00:00",
+    "type": 1,
+    "no": "CZ0348",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "巴黎",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/fT7oUl_Twl8sn_cHaFj0Iw",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/13 10:39:46",
+    "updated_at": "2020/04/13 16:38:36"
+},
+{
+    "id": 4864,
+    "date": "2020-04-07",
+    "start": "2020/04/07 00:00:00",
+    "end": "2020/04/08 00:00:00",
+    "type": 1,
+    "no": "CZ348",
+    "memo": "",
+    "no_sub": "",
+    "pos_start": "巴黎",
+    "pos_end": "广州",
+    "source": "https://mp.weixin.qq.com/s/QapaEh4EZ-t4VsMwtoW7Lg",
+    "who": "广东发布",
+    "verified": 1,
+    "created_at": "2020/04/13 10:42:09",
+    "updated_at": "2020/04/13 16:38:16"
+}
 ]
 if (localStorage.getItem("traceData") != null) {
     traceData = JSON.parse(localStorage.getItem("traceData"));
@@ -538,10 +550,18 @@ if (localStorage.getItem("traceData") != null) {
 var tracePageNum = 0
 var traceScrollWidth = 550
 
-var navAnimation = [
-    { 'animation': 'map-after 0.5s ease-in-out', 'animation-fill-mode': 'forwards' },
-    { 'animation': 'rumor-after 0.5s ease-in-out', 'animation-fill-mode': 'forwards' },
-    { 'animation': 'trace-after 0.5s ease-in-out', 'animation-fill-mode': 'forwards' }
+var navAnimation = [{
+    'animation': 'map-after 0.5s ease-in-out',
+    'animation-fill-mode': 'forwards'
+},
+{
+    'animation': 'rumor-after 0.5s ease-in-out',
+    'animation-fill-mode': 'forwards'
+},
+{
+    'animation': 'trace-after 0.5s ease-in-out',
+    'animation-fill-mode': 'forwards'
+}
 ]
 
 // 入口函数
@@ -555,9 +575,9 @@ $(document).ready(function () {
     var scrollWidth = main_1.offsetWidth;
     var traceScrollBox = document.getElementById('trace-scroll-box')
 
+    // 
     navRight.fadeOut("300");
     navLeft.fadeOut("300");
-
     boxMain.mouseenter(function () {
         navRight.fadeIn("300");
         navLeft.fadeIn("300");
@@ -569,109 +589,127 @@ $(document).ready(function () {
 
     navLeft.click(function () {
         pageNum--;
-        if (pageNum <= 0) {
-            pageNum = 0;
+        if (pageNum < 0) {
+            pageNum = 2;
+            scrollBox.style.left = `${pageNum * -100}%`
+            $("#nav-after").css(navAnimation[pageNum])
+            return
+        } else if (pageNum == 1) {
+            scrollBox.style.left = `${pageNum * -100}%`
+            $("#nav-after").css(navAnimation[pageNum])
+            return
         }
         $("#nav-after").css(navAnimation[pageNum])
-        tween(scrollBox, {
-            left: -scrollWidth * pageNum
-        }, 10);
+        scrollBox.style.left = `${pageNum * 100}%`
     });
     navRight.click(function () {
         pageNum++;
-        if (pageNum >= 3) {
+        if (pageNum > 2) {
             pageNum = 0;
-            tween(scrollBox, {
-                left: -scrollWidth * pageNum
-            }, 0);
-            $("#nav-after").css(navAnimation[pageNum])
-            return;
         }
         $("#nav-after").css(navAnimation[pageNum])
-        tween(scrollBox, {
-            left: -scrollWidth * pageNum
-        }, 10);
+        scrollBox.style.left = `${pageNum * -100}%`
     });
 
     // 同程卡片
     $('#main_3 #trace-box #left-nav').click(function () {
-        $('#main_3 #trace-box #left-nav').css({ 'display': 'none' })
-        var traceScrollBoxLeft = parseInt(getStyle(traceScrollBox, 'left'));
-        var scrollBoxChildren = document.querySelectorAll('#trace-scroll-box div');
         tracePageNum--;
-        [].forEach.call(scrollBoxChildren, (item, index) => {
-            item.classList.remove('current-box')
-            item.classList.remove('side-box')
-        })
-        if (tracePageNum < 0) {
-            tracePageNum = 0
-            scrollBoxChildren[tracePageNum].classList.add('current-box');
-            scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
-            $('#main_3 #trace-box #left-nav').css({ 'display': 'block' })
-            return;
-        } else if (tracePageNum > 0) {
-            scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
-        }
-        scrollBoxChildren[tracePageNum].classList.add('current-box');
-
-        scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
+        let traceScrollBoxLeft = CardMove('left')
         tween(traceScrollBox, {
             left: traceScrollBoxLeft + traceScrollWidth
         }, 10, function () {
-            $('#main_3 #trace-box #left-nav').css({ 'display': 'block' })
+            $('#main_3 #trace-box #left-nav').css({
+                'display': 'block'
+            })
+            $('#main_3 #trace-box #right-nav').css({
+                'display': 'block'
+            })
         });
     })
     $('#main_3 #trace-box #right-nav').click(function () {
-        $('#main_3 #trace-box #right-nav').css({ 'display': 'none' })
-        var traceScrollBoxLeft = parseInt(getStyle(traceScrollBox, 'left'));
-        var scrollBoxChildren = document.querySelectorAll('#trace-scroll-box div');
         tracePageNum++;
-        [].forEach.call(scrollBoxChildren, (item, index) => {
+        let traceScrollBoxLeft = CardMove('right')
+        $('#trace-scroll-box').animate({
+            left: traceScrollBoxLeft - traceScrollWidth
+        }, 300, function () {
+            $('#main_3 #trace-box #left-nav').css({
+                'display': 'block'
+            })
+            $('#main_3 #trace-box #right-nav').css({
+                'display': 'block'
+            })
+        })
+    })
+
+    // 同程卡片移动 函数
+    function CardMove(dir) {
+        var pageOffset = 1
+        $('#main_3 #trace-box #left-nav').css({
+            'display': 'none'
+        })
+        $('#main_3 #trace-box #right-nav').css({
+            'display': 'none'
+        })
+        var scrollBoxLeft = parseInt(getStyle(traceScrollBox, 'left'));
+        var scrollBoxChildren = document.querySelectorAll('#trace-scroll-box div');
+        [].forEach.call(scrollBoxChildren, item => {
             item.classList.remove('current-box')
             item.classList.remove('side-box')
         })
-        if (tracePageNum > 9) {
-            tracePageNum = 9
-            scrollBoxChildren[tracePageNum].classList.add('current-box');
-            scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
-            $('#main_3 #trace-box #right-nav').css({ 'display': 'block' })
-            return;
-        } else if (tracePageNum < 9) {
-            scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
+        if (dir === 'left') {
+            pageOffset *= -1
+            if (tracePageNum < 0) {
+                tracePageNum = 0
+                scrollBoxChildren[tracePageNum].classList.add('current-box');
+                scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
+                $('#main_3 #trace-box #left-nav').css({
+                    'display': 'block'
+                })
+                $('#main_3 #trace-box #right-nav').css({
+                    'display': 'block'
+                })
+                return;
+            } else if (tracePageNum > 0) {
+                scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
+            }
+        } else {
+            if (tracePageNum > scrollBoxChildren.length - 1) {
+                tracePageNum = scrollBoxChildren.length - 1
+                scrollBoxChildren[tracePageNum].classList.add('current-box');
+                scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
+                $('#main_3 #trace-box #left-nav').css({
+                    'display': 'block'
+                })
+                $('#main_3 #trace-box #right-nav').css({
+                    'display': 'block'
+                })
+                return;
+            } else if (tracePageNum < scrollBoxChildren.length - 1) {
+                scrollBoxChildren[tracePageNum + 1].classList.add('side-box');
+            }
         }
-        scrollBoxChildren[tracePageNum - 1].classList.add('side-box');
+        scrollBoxChildren[tracePageNum - pageOffset].classList.add('side-box');
         scrollBoxChildren[tracePageNum].classList.add('current-box');
-
-        tween(traceScrollBox, {
-            left: traceScrollBoxLeft - traceScrollWidth
-        }, 10, function () {
-            $('#main_3 #trace-box #right-nav').css({ 'display': 'block' })
-        });
-    })
+        return scrollBoxLeft;
+    }
 
     //导航点击
     $("#mapbtn").click(function () {
         pageNum = 0;
         $("#nav-after").css(navAnimation[pageNum])
-        tween(scrollBox, {
-            left: scrollWidth * pageNum
-        }, 10);
+        scrollBox.style.left = `${pageNum * -100}%`
     });
 
     $("#rumorbtn").click(function () {
         pageNum = 1;
         $("#nav-after").css(navAnimation[pageNum])
-        tween(scrollBox, {
-            left: -scrollWidth * pageNum
-        }, 10);
+        scrollBox.style.left = `${pageNum * -100}%`
     });
 
     $("#tracebtn").click(function () {
         pageNum = 2;
         $("#nav-after").css(navAnimation[pageNum])
-        tween(scrollBox, {
-            left: -scrollWidth * pageNum
-        }, 10);
+        scrollBox.style.left = `${pageNum * -100}%`
     });
 
     // 等封面标题出现后，才触发动画
@@ -721,6 +759,7 @@ $(document).ready(function () {
             function (data, status) {
                 rumorData = data.newslist;
                 localStorage.setItem("rumorData", JSON.stringify(rumorData));
+                saveHandler(rumorData)
             }
         );
         //获取疫情同程
@@ -753,18 +792,21 @@ $(document).ready(function () {
     // 向左点击（或者拖拽）划走封面
     $("#arrow").click(function () {
         $("#coverBG").css({
-            animation: "coverBG 0s ease-in-out"
+            'animation': "coverBG 0s ease-in-out"
         });
         $("#coverBG").css({
             left: -scrollWidth
         });
         setTimeout(function () {
             $("#cover").css({
-                display: "none"
+                'display': "none"
             });
             $("#showtime").css({
-                animation: "showtimeTween 1s ease-in-out",
+                'animation': "showtimeTween 1s ease-in-out",
                 "animation-fill-mode": "forwards",
+            });
+            $('header nav').css({
+                opacity: "100"
             });
         }, 1000);
     });
@@ -794,6 +836,9 @@ $(document).ready(function () {
                     animation: "showtimeTween 1s ease-in-out",
                     "animation-fill-mode": "forwards",
                 });
+                $('header nav').css({
+                    opacity: "100"
+                });
             }, 1000);
         }
         document.removeEventListener("mousedown", this);
@@ -806,7 +851,10 @@ $(document).ready(function () {
         $("#rumor_title").html(rumorData[index].title);
         $("#rumor_author").html("作者：" + rumorData[index].author);
         $("#rumor_explain").html("说明：" + rumorData[index].explain);
-        $("#rumor_img").attr("src", rumorData[index].imgsrc);
+        var imgSrc = rumorData[index].imgsrc.split("?")[0];
+        imgSrc = rumorImg[index].imgSrc
+        console.log(imgSrc);
+        $("#rumor_img").attr("src", imgSrc);
         $("#rumor_desc").html("描述：" + rumorData[index].desc);
         $("#rumorInfo").fadeOut(300);
         // console.log(index);
@@ -819,8 +867,8 @@ $(document).ready(function () {
     });
 });
 
-function saveHandler() {
-    var content = JSON.stringify(traceData);
+function saveHandler(data) {
+    var content = JSON.stringify(data);
     var blob = new Blob([content], {
         type: "text/plain;charset=utf-8"
     });
@@ -902,11 +950,13 @@ function chinaMap() {
                 },
                 // selectedMode: 'single',
                 itemStyle: {
-                    //原来0E95F1
-                    areaColor: "#0E95F1",
-                    //原来e9e9e9
+                    // 原来0E95F1
+                    // #A4C8FD
+                    areaColor: "#A4C8FD",
+                    // 原来e9e9e9
                     borderColor: "#e9e9e9",
                     borderWidth: 1,
+                    // 原来0E95F1
                     shadowColor: "#0E95F1",
                     shadowBlur: 20,
                 },
@@ -981,7 +1031,7 @@ function chinaMap() {
                             350,
                             function () {
                                 $(this).animate({
-                                    top: 1000 + "px",
+                                    top: 200 + "%",
                                 },
                                     300,
                                     function () {
@@ -1203,6 +1253,7 @@ function RandomNumBoth(Min, Max) {
 
 //疫情同城查询信息
 tracequery();
+
 function tracequery() {
     // 遍历疫情同程信息
     var m = 1;
@@ -1221,8 +1272,6 @@ function tracequery() {
         m++
     });
 }
-
-
 
 var t = null;
 t = setTimeout(time, 0); //開始运行
