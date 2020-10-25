@@ -45,61 +45,63 @@ li {
 }
 
 #coverBG #title {
-    margin-top: 100px;
+    margin-top: 6.25rem;
     z-index: 1;
 }
 
 #coverBG #title01, #coverBG #title02 {
-    font-size: 50px;
+    font-size: 3.125rem;
     position: absolute;
 }
 
 #coverBG #title01 {
-    left: -500px;
+    /* left: -33rem; */
+    left: 27.5%;
     animation: title01 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 #coverBG #title02 {
-    right: -500px;
-    top: 180px;
+    /* right: -33rem; */
+    right: 27.5%;
+    top: 11.25rem;
     animation: title02 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 #coverBG #desc {
-    padding: 5px;
-    width: 500px;
+    padding: 0.3125rem;
+    width: 31.25rem;
     border: 1px solid #ACB7A0;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     opacity: 0;
-    margin-top: 200px;
+    margin-top: 12.5rem;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: desc 1s ease-in;
-    animation-delay: 1s;
+    animation: desc 0.8s ease-in;
+    animation-delay: 0.8s;
     animation-fill-mode: forwards;
 }
 
 #coverBG #desc p {
-    letter-spacing: 2px;
-    line-height: 30px;
+    letter-spacing: 0.125rem;
+    line-height: 1.875rem;
 }
 
 #coverBG #desc #p1 {
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 1.5625rem;
+    margin-bottom: 0.625rem;
 }
 
 #coverBG #desc #p2 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #coverBG #tip {
     position: absolute;
-    bottom: 20px;
+    bottom: 1.25rem;
     opacity: 0;
     animation: tip 1s ease-in-out;
     animation-fill-mode: forwards;
@@ -117,9 +119,9 @@ li {
     position: absolute;
     cursor: pointer;
     opacity: 0;
-    right: -50px;
+    right: -3.125rem;
     top: 50%;
-    width: 100px;
+    width: 6.25rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -154,20 +156,30 @@ svg {
 }
 
 @keyframes title01 {
+    0%{
+        left: 0;
+    }
     80% {
-        left: 500px;
+        /* left: 31.25rem; */
+        left: 26%;
     }
     100% {
-        left: 480px;
+        /* left: 30rem; */
+        left: 25%;
     }
 }
 
 @keyframes title02 {
+    0%{
+        right: 0;
+    }
     80% {
-        right: 530px;
+        /* right: 33.125rem; */
+        right: 27.6%;
     }
     100% {
-        right: 510px;
+        /* right: 31.875rem; */
+        right: 26.5%;
     }
 }
 
@@ -182,7 +194,7 @@ svg {
         transform: translateX(0);
     }
     50% {
-        transform: translateX(-15px);
+        transform: translateX(-0.9375rem);
     }
 }
 
@@ -210,16 +222,16 @@ header {
     flex: 1;
     /* background: rgba(0, 0, 0, .3); */
     text-align: left;
-    line-height: 80px;
+    line-height: 5rem;
     color: #fff;
 }
 
 header h1 {
-    width: 500px;
-    font-size: 35px;
+    width: 31.25rem;
+    font-size: 2.1875rem;
     color: transparent;
     position: relative;
-    margin-left: 30px;
+    margin-left: 1.875rem;
     background: -webkit-linear-gradient(left, yellow, #4cd137, #00d2d3, yellow, #00d2d3, #2e86de, #4cd137, #2e86de);
     background-size: 400%;
     background-clip: text;
@@ -249,22 +261,22 @@ header h1::before {
 header nav {
     opacity: 0;
     position: absolute;
-    bottom: 35px;
-    right: 250px;
+    bottom: 2.1875rem;
+    right: 15.625rem;
     transition: all 1.5s ease-in-out;
 }
 
 @keyframes navTween {
     80% {
-        bottom: 25px;
+        bottom: 1.5625rem;
     }
     100% {
-        bottom: 35px;
+        bottom: 2.1875rem;
     }
 }
 
 header nav ul {
-    width: 380px;
+    width: 26rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -274,13 +286,13 @@ header nav ul {
 header nav #nav-after {
     width: 100%;
     left: 0;
-    height: 4px;
-    border-radius: 15px;
+    height: 0.25rem;
+    border-radius: 0.9375rem;
     background-color: #f7f1e3;
     position: absolute;
     animation: map-after 0.5s ease-in-out;
     animation-fill-mode: forwards;
-    bottom: -23px;
+    bottom: -1.4375rem;
 }
 
 @keyframes map-after {
@@ -289,8 +301,8 @@ header nav #nav-after {
         left: -42.5%;
     }
     100% {
-        width: 33%;
-        left: 0;
+        width: 31%;
+        left: -1%;
     }
 }
 
@@ -312,82 +324,81 @@ header nav #nav-after {
     }
     100% {
         width: 33%;
-        left: 67%;
+        left: 68.5%;
     }
 }
 
 header nav ul li {
-    height: 40px;
+    height: 2.5rem;
     cursor: pointer;
 }
 
 header nav ul li i {
     font-style: normal;
-    font-size: 17px;
+    font-size: 1.0625rem;
     color: #FAF7FF;
 }
 
 header nav ul li img {
     vertical-align: middle;
-    margin-bottom: 2px;
-    margin-left: 5px;
-    width: 18px;
-    height: 18px;
+    margin-bottom: 0.125rem;
+    margin-left: 0.3125rem;
+    width: 1.125rem;
+    height: 1.125rem;
 }
 
 header #showtime {
-    padding: 5px;
-    width: 150px;
-    height: 50px;
-    /* 原来03afa7 */
-    border: 3px solid #00c6c2;
-    border-radius: 5px;
+    padding: 0.3125rem;
+    width: 9.375rem;
+    height: 3.125rem;
+    border: 0.1875rem solid #00c6c2;
+    border-radius: 0.3125rem;
     position: absolute;
-    bottom: 200px;
-    right: 50px;
+    bottom: 12.5rem;
+    right: 3.125rem;
 }
 
-header #showtime span {
+/* header #showtime span {
     position: absolute;
-    width: 3px;
-    height: 20px;
-    border-radius: 20px;
+    width: 0.1875rem;
+    height: 1rem;
+    border-radius: 1.25rem;
     background-color: #00c6c2;
-}
+} */
 
-header #showtime #column01 {
-    left: 5px;
-    top: -20px;
+/* header #showtime #column01 {
+    left: 0.3125rem;
+    top: -1.25rem;
 }
 
 header #showtime #column02 {
-    right: 5px;
-    top: -20px;
-}
+    right: 0.3125rem;
+    top: -1.25rem;
+} */
 
 header #showtime p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     text-align: center;
     width: 100%;
-    height: 20px;
     left: 0;
     position: absolute;
 }
 
 header #showtime #p1 {
-    top: -28px;
+    top: -1.75rem;
+    white-space: nowrap;
 }
 
 header #showtime #p2 {
-    top: -6px;
+    top: -0.375rem;
 }
 
 @keyframes showtimeTween {
     80% {
-        bottom: 10px;
+        bottom: 0.625rem;
     }
     100% {
-        bottom: 20px;
+        bottom: 1.25rem;
     }
 }
 
@@ -407,15 +418,15 @@ header #showtime #p2 {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    width: 50px;
-    height: 150px;
+    width: 3.125rem;
+    height: 9.375rem;
     background-color: rgba(0, 0, 0, .3);
     text-align: center;
-    line-height: 150px;
+    line-height: 9.375rem;
     color: rgba(0, 255, 255, .3);
-    font-size: 50px;
+    font-size: 3.125rem;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 #navLeft {
@@ -427,15 +438,15 @@ header #showtime #p2 {
 }
 
 #navLeft span, #navRight span {
-    width: 30px;
-    height: 5px;
+    width: 1.875rem;
+    height: 0.3125rem;
     background-color: #fff;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     transition: all 0.1s ease-in-out;
 }
 
 #navLeft #span1, #navRight #span1 {
-    margin-bottom: 13.5px;
+    margin-bottom: 0.84375rem;
 }
 
 #navLeft:hover>#span1 {
@@ -467,30 +478,40 @@ header #showtime #p2 {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
+}
+
+.outer {
+    margin: auto;
+    width: 50%;
+    height: 600px;
 }
 
 .china {
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin: 15px auto 0;
+    margin: 0.9375rem auto 0;
     width: 1000px;
     height: 600px;
 }
 
 #bar_box {
     display: none;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin: 50px auto 0;
-    width: 800px;
-    height: 600px;
+    width: 50rem;
+    height: 37.5rem;
 }
 
 .bar {
-    margin: 15px auto 0;
-    width: 725px;
-    height: 600px;
+    margin: 0.9375rem auto 0;
+    width: 45.3125rem;
+    height: 37.5rem;
 }
 
 #close {
@@ -529,23 +550,32 @@ header #showtime #p2 {
     width: 100%;
     height: 100%;
     position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#main_2::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
 }
 
 #rumorInfo {
-    margin-top: 100PX;
+    margin-top: 8.3rem;
 }
 
 #rumorInfo i {
     font-style: normal;
     transition: all 0.2s ease-in-out;
-    height: 200px;
+    height: 12.5rem;
     display: inline-block;
 }
 
 #main_2 span {
     cursor: pointer;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
 }
 
@@ -556,8 +586,8 @@ header #showtime #p2 {
 #rumor_Det {
     display: none;
     position: relative;
-    margin: 50px auto;
-    width: 800px;
+    margin: 3.125rem auto;
+    width: 50rem;
 }
 
 #rumor_Det p {
@@ -565,14 +595,14 @@ header #showtime #p2 {
 }
 
 #rumor_Det img {
-    width: 250px;
-    height: 180px;
+    width: 15.625rem;
+    height: 11.25rem;
 }
 
 #rumor_Det #rumor_close {
-    width: 30px;
-    height: 30px;
-    right: -25px;
+    width: 1.875rem;
+    height: 1.875rem;
+    right: -1.5625rem;
     top: 0px;
     position: absolute;
     transition: all 0.2s ease;
@@ -583,29 +613,19 @@ header #showtime #p2 {
     transform: rotateZ(90deg);
 }
 
-/*  */
-
-@media screen and (max-width: 1024px) {
-    html {
-        /* font-size: 42px !important; */
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    html {
-        /* font-size: 80px !important; */
-    }
-}
-
 #rumor_Det p {
     text-align: left;
-    margin: 10px 0 10px;
-    line-height: 30px;
+    margin: 0.625rem 0 0.625rem;
+    line-height: 1.875rem;
+}
+
+#rumor_Det #rumor_desc {
+    line-height: 2.5rem;
 }
 
 #rumor_Det #rumor_title {
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* 头部与main之间的条块 */
@@ -627,14 +647,14 @@ header #showtime #p2 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 900px;
-    height: 600px;
+    width: 56.25rem;
+    height: 37.5rem;
     overflow: hidden;
 }
 
 #main_3 #trace-box #left-nav, #main_3 #trace-box #right-nav {
     position: absolute;
-    width: 165px;
+    width: 10.3125rem;
     height: 100%;
     opacity: 0;
     z-index: 5;
@@ -650,11 +670,11 @@ header #showtime #p2 {
 
 #trace-scroll-box {
     position: absolute;
-    left: 200px;
+    left: 12.5rem;
     top: 50%;
     transform: translate(0, -50%);
-    width: 5500px;
-    height: 500px;
+    width: 343.75rem;
+    height: 31.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -663,15 +683,15 @@ header #showtime #p2 {
 }
 
 #trace-scroll-box div {
-    flex: 0 0 500px;
-    height: 300px;
-    margin-right: 50px;
+    flex: 0 0 31.25rem;
+    height: 18.75rem;
+    margin-right: 3.125rem;
     position: relative;
     background-color: rgba(43, 43, 45, 0.1);
     border: 3px solid rgba(0, 255, 255, 0.3);
-    border-radius: 50px;
+    border-radius: 3.125rem;
     transition: all 0.2s ease-in-out;
-    box-shadow: 1px 1px 15px rgb(0, 0, 0,0.5);
+    box-shadow: 1px 1px 15px rgb(0, 0, 0, 0.5);
 }
 
 #trace-scroll-box .current-box {
@@ -683,32 +703,34 @@ header #showtime #p2 {
 }
 
 #trace-scroll-box #tracedate {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
     text-align: left;
     display: block;
     color: #718af4;
+    font-size: 1rem;
 }
 
 #trace-scroll-box #address {
-    margin: 20px auto 0;
-    width: 500px;
-    height: 30px;
+    margin: 1.25rem auto 0;
+    width: 31.25rem;
+    height: 1.875rem;
     display: flex;
+    font-size: 1rem;
 }
 
 #trace-scroll-box #pos_start {
     flex: 1;
     text-align: center;
     color: #D1EEEC;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 #trace-scroll-box #pos_end {
     flex: 1;
     text-align: center;
     color: #D1EEEC;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 #trace-scroll-box #traceno {
@@ -716,7 +738,7 @@ header #showtime #p2 {
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-align: center;
     /* justify-content: space-between; */
     align-items: center;
@@ -730,44 +752,71 @@ header #showtime #p2 {
     flex: 1;
     margin-top: -10px;
     margin-left: 10px;
-    width: 100px;
-    height: 50px;
+    width: 6.25rem;
+    height: 3.125rem;
 }
 
 #trace-scroll-box #tracestart {
     position: absolute;
-    margin-top: 10px;
-    left: 50px;
+    margin-top: 0.625rem;
+    left: 3.125rem;
     color: #A7A8CD;
+    font-size: 1rem;
 }
 
 #trace-scroll-box #traceend {
     position: absolute;
-    margin-top: 10px;
-    right: 50px;
+    margin-top: 0.625rem;
+    right: 3.125rem;
     color: #A7A8CD;
+    font-size: 1rem;
 }
 
 #trace-scroll-box hr {
     display: block;
-    width: 400px;
-    margin: 40px auto 0;
+    width: 25rem;
+    margin: 2.5rem auto 0;
     background-color: #D1EEEC;
 }
 
 #trace-scroll-box #memo {
     position: absolute;
-    margin-top: 50px;
-    left: 50px;
+    margin-top: 3.125rem;
+    left: 3.125rem;
     color: #D1EEEC;
+    font-size: 1rem;
 }
 
 #trace-scroll-box div #rightbottom {
     position: absolute;
-    right: 45px;
-    bottom: 30px;
-    font-size: 13px;
-    line-height: 22px;
+    right: 2.8125rem;
+    bottom: 1.875rem;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
     text-align: right;
     color: #8D808F;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 36px !important;
+    }
+}
+
+/* @media screen and (max-width: 750px) {
+    html {
+        font-size: 12px !important;
+    }
+} */
+
+@media screen and (max-width: 560px) {
+    html {
+        font-size: 8px !important;
+    }
 }

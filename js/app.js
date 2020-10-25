@@ -629,16 +629,26 @@ $(document).ready(function () {
     $('#main_3 #trace-box #right-nav').click(function () {
         tracePageNum++;
         let traceScrollBoxLeft = CardMove('right')
-        $('#trace-scroll-box').animate({
+        // $('#trace-scroll-box').animate({
+        //     left: traceScrollBoxLeft - traceScrollWidth
+        // }, 'slow', function () {
+        //     $('#main_3 #trace-box #left-nav').css({
+        //         'display': 'block'
+        //     })
+        //     $('#main_3 #trace-box #right-nav').css({
+        //         'display': 'block'
+        //     })
+        // })
+        tween(traceScrollBox, {
             left: traceScrollBoxLeft - traceScrollWidth
-        }, 300, function () {
+        }, 10, function () {
             $('#main_3 #trace-box #left-nav').css({
                 'display': 'block'
             })
             $('#main_3 #trace-box #right-nav').css({
                 'display': 'block'
             })
-        })
+        });
     })
 
     // 同程卡片移动 函数
@@ -759,7 +769,7 @@ $(document).ready(function () {
             function (data, status) {
                 rumorData = data.newslist;
                 localStorage.setItem("rumorData", JSON.stringify(rumorData));
-                saveHandler(rumorData)
+                // saveHandler(rumorData)
             }
         );
         //获取疫情同程
@@ -795,7 +805,7 @@ $(document).ready(function () {
             'animation': "coverBG 0s ease-in-out"
         });
         $("#coverBG").css({
-            left: -scrollWidth
+            left: -100 + "%",
         });
         setTimeout(function () {
             $("#cover").css({
@@ -826,7 +836,7 @@ $(document).ready(function () {
                 animation: "coverBG 0s ease-in-out"
             });
             $("#coverBG").css({
-                left: -scrollWidth
+                left: -100 + "%",
             });
             setTimeout(function () {
                 $("#cover").css({
@@ -1031,7 +1041,7 @@ function chinaMap() {
                             350,
                             function () {
                                 $(this).animate({
-                                    top: 200 + "%",
+                                    top: -200 + "%",
                                 },
                                     300,
                                     function () {
@@ -1233,13 +1243,13 @@ function randomRumor() {
         rumorInfo.appendChild(rumor_i);
         rumor_i.appendChild(rumor_span);
 
-        randomSize = RandomNumBoth(15, 30);
-        randomX = RandomNumBoth(50, 800);
-        randomY = RandomNumBoth(50, 500);
+        randomSize = RandomNumBoth(0.9375, 1.875);
+        randomX = RandomNumBoth(3.125, 50);
+        randomY = RandomNumBoth(3.125, 31.25);
         randomDeg = RandomNumBoth(-30, 30);
         var degStr = randomDeg + "deg";
         rumor_span.style.transform = "rotate(" + degStr + ")";
-        rumor_span.style.fontSize = randomSize + "px";
+        rumor_span.style.fontSize = randomSize + "rem";
         posIndex++;
     });
 }
