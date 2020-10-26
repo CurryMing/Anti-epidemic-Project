@@ -13,6 +13,10 @@ html, body {
     overflow: auto;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     display: flex;
     position: relative;
@@ -156,7 +160,7 @@ svg {
 }
 
 @keyframes title01 {
-    0%{
+    0% {
         left: 0;
     }
     80% {
@@ -170,7 +174,7 @@ svg {
 }
 
 @keyframes title02 {
-    0%{
+    0% {
         right: 0;
     }
     80% {
@@ -479,21 +483,15 @@ header #showtime #p2 {
     height: 100%;
     position: relative;
     overflow: hidden;
-}
-
-.outer {
-    margin: auto;
-    width: 50%;
-    height: 600px;
+    text-align: center;
 }
 
 .china {
     position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0.9375rem auto 0;
-    width: 1000px;
+    left: 0;
+    top: 0;
+    margin: 3.125rem auto;
+    width: 62.5rem;
     height: 600px;
 }
 
@@ -600,9 +598,9 @@ header #showtime #p2 {
 }
 
 #rumor_Det #rumor_close {
-    width: 1.875rem;
-    height: 1.875rem;
-    right: -1.5625rem;
+    width: 30px;
+    height: 30px;
+    right: -25px;
     top: 0px;
     position: absolute;
     transition: all 0.2s ease;
@@ -750,8 +748,8 @@ header #showtime #p2 {
 
 #trace-scroll-box #traceno #traceicon {
     flex: 1;
-    margin-top: -10px;
-    margin-left: 10px;
+    margin-top: -0.625rem;
+    margin-left: 0.625rem;
     width: 6.25rem;
     height: 3.125rem;
 }
@@ -809,11 +807,6 @@ header #showtime #p2 {
     }
 }
 
-/* @media screen and (max-width: 750px) {
-    html {
-        font-size: 12px !important;
-    }
-} */
 
 @media screen and (max-width: 560px) {
     html {

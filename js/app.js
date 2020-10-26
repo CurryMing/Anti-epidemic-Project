@@ -792,7 +792,7 @@ $(document).ready(function () {
     $("#close").click(function () {
         $("#bar_box").fadeOut(100);
         $(".china").animate({
-            top: 50 + "%",
+            top: 0 + "%",
         },
             300
         );
@@ -1026,22 +1026,22 @@ function chinaMap() {
         // $(".china").fadeOut(300);
         // $('#bar_box').fadeIn(500);
         $(".china").animate({
-            left: 30 + "%",
+            left: -20 + "%",
         },
             350,
             function () {
                 $(this).animate({
-                    left: 70 + "%",
+                    left: 20 + "%",
                 },
                     350,
                     function () {
                         $(this).animate({
-                            left: 50 + "%",
+                            left: 0 + "%",
                         },
                             350,
                             function () {
                                 $(this).animate({
-                                    top: -200 + "%",
+                                    top: 200 + "%",
                                 },
                                     300,
                                     function () {
