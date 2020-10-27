@@ -8,7 +8,18 @@
     user-select: none;
 }
 
-html, body {
+@font-face {
+    font-family: Trebuchet-ms;
+    src: url(../font/Trebuchet\ MS.ttf);
+}
+
+@font-face {
+    font-family: WeiRuanYaHei;
+    src: url(../font/WeiRuanYaHei.ttf);
+}
+
+html,
+body {
     height: 100%;
     overflow: auto;
 }
@@ -20,6 +31,7 @@ html {
 body {
     display: flex;
     position: relative;
+    font-family: WeiRuanYaHei;
 }
 
 li {
@@ -27,11 +39,11 @@ li {
 }
 
 #cover {
-    /* display: none; */
     z-index: 100;
 }
 
-#cover, #coverBG {
+#cover,
+#coverBG {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -40,6 +52,7 @@ li {
 }
 
 #coverBG {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,21 +66,20 @@ li {
     z-index: 1;
 }
 
-#coverBG #title01, #coverBG #title02 {
+#coverBG #title01,
+#coverBG #title02 {
     font-size: 3.125rem;
     position: absolute;
 }
 
 #coverBG #title01 {
-    /* left: -33rem; */
-    left: 27.5%;
+    left: 100%;
     animation: title01 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 #coverBG #title02 {
-    /* right: -33rem; */
-    right: 27.5%;
+    right: 100%;
     top: 11.25rem;
     animation: title02 1s ease-in-out;
     animation-fill-mode: forwards;
@@ -119,7 +131,6 @@ li {
 }
 
 #coverBG #arrow {
-    /* background-color: #00D2C7; */
     position: absolute;
     cursor: pointer;
     opacity: 0;
@@ -133,7 +144,8 @@ li {
     animation: arrowTween 3s ease-in-out infinite;
 }
 
-#arrow1, #arrow2 {
+#arrow1,
+#arrow2 {
     background-color: #000;
     border: 2px solid #000;
     border-radius: 2px;
@@ -153,37 +165,27 @@ li {
     transform: translateY(5.6px) rotateZ(45deg);
 }
 
-svg {
-    position: absolute;
-    z-index: 0;
-    /* background-color: #333744; */
-}
-
 @keyframes title01 {
     0% {
-        left: 0;
+        left: -30%;
     }
-    80% {
-        /* left: 31.25rem; */
-        left: 26%;
+    50% {
+        left: 35%;
     }
     100% {
-        /* left: 30rem; */
-        left: 25%;
+        left: 30%;
     }
 }
 
 @keyframes title02 {
     0% {
-        right: 0;
+        right: -30%;
     }
-    80% {
-        /* right: 33.125rem; */
-        right: 27.6%;
+    50% {
+        right: 38%;
     }
     100% {
-        /* right: 31.875rem; */
-        right: 26.5%;
+        right: 33%;
     }
 }
 
@@ -194,18 +196,22 @@ svg {
 }
 
 @keyframes coverTween {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(-0.9375rem);
     }
 }
 
 @keyframes arrowTween {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
@@ -274,6 +280,7 @@ header nav {
     80% {
         bottom: 1.5625rem;
     }
+
     100% {
         bottom: 2.1875rem;
     }
@@ -300,35 +307,38 @@ header nav #nav-after {
 }
 
 @keyframes map-after {
-    50% {
+    from {
         width: 100%;
         left: -42.5%;
     }
-    100% {
+
+    to {
         width: 31%;
         left: -1%;
     }
 }
 
 @keyframes rumor-after {
-    50% {
+    from {
         width: 100%;
         left: 0%;
     }
-    100% {
-        width: 15%;
-        left: 42.5%;
+
+    to {
+        width: 22%;
+        left: 39%;
     }
 }
 
 @keyframes trace-after {
-    50% {
+    from {
         width: 100%;
         left: 42.5%;
     }
-    100% {
-        width: 33%;
-        left: 68.5%;
+
+    to {
+        width: 32%;
+        left: 69%;
     }
 }
 
@@ -362,26 +372,9 @@ header #showtime {
     right: 3.125rem;
 }
 
-/* header #showtime span {
-    position: absolute;
-    width: 0.1875rem;
-    height: 1rem;
-    border-radius: 1.25rem;
-    background-color: #00c6c2;
-} */
-
-/* header #showtime #column01 {
-    left: 0.3125rem;
-    top: -1.25rem;
-}
-
-header #showtime #column02 {
-    right: 0.3125rem;
-    top: -1.25rem;
-} */
-
 header #showtime p {
     font-size: 0.9375rem;
+    font-family: Trebuchet-ms;
     text-align: center;
     width: 100%;
     left: 0;
@@ -401,6 +394,7 @@ header #showtime #p2 {
     80% {
         bottom: 0.625rem;
     }
+
     100% {
         bottom: 1.25rem;
     }
@@ -414,7 +408,8 @@ header #showtime #p2 {
     margin-top: 10px;
 }
 
-#navLeft, #navRight {
+#navLeft,
+#navRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -441,7 +436,8 @@ header #showtime #p2 {
     right: 0;
 }
 
-#navLeft span, #navRight span {
+#navLeft span,
+#navRight span {
     width: 1.875rem;
     height: 0.3125rem;
     background-color: #fff;
@@ -449,7 +445,8 @@ header #showtime #p2 {
     transition: all 0.1s ease-in-out;
 }
 
-#navLeft #span1, #navRight #span1 {
+#navLeft #span1,
+#navRight #span1 {
     margin-bottom: 0.84375rem;
 }
 
@@ -475,7 +472,7 @@ header #showtime #p2 {
     height: 100%;
     position: absolute;
     left: 0;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #main_1 {
@@ -526,7 +523,8 @@ header #showtime #p2 {
     transform: rotateZ(90deg);
 }
 
-#close1, #close2 {
+#close1,
+#close2 {
     position: absolute;
     top: 3px;
     right: 12.5px;
@@ -556,7 +554,6 @@ header #showtime #p2 {
 
 #main_2::-webkit-scrollbar {
     display: none;
-    /* Chrome Safari */
 }
 
 #rumorInfo {
@@ -627,7 +624,6 @@ header #showtime #p2 {
 }
 
 /* 头部与main之间的条块 */
-
 .w {
     width: 100%;
     background-color: #c4c4c7;
@@ -650,7 +646,8 @@ header #showtime #p2 {
     overflow: hidden;
 }
 
-#main_3 #trace-box #left-nav, #main_3 #trace-box #right-nav {
+#main_3 #trace-box #left-nav,
+#main_3 #trace-box #right-nav {
     position: absolute;
     width: 10.3125rem;
     height: 100%;
@@ -676,8 +673,6 @@ header #showtime #p2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transform-style: preserve-3d;
-    perspective: 1000px; */
 }
 
 #trace-scroll-box div {
@@ -707,6 +702,7 @@ header #showtime #p2 {
     display: block;
     color: #718af4;
     font-size: 1rem;
+    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box #address {
@@ -722,6 +718,7 @@ header #showtime #p2 {
     text-align: center;
     color: #D1EEEC;
     font-size: 1.25rem;
+    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box #pos_end {
@@ -729,6 +726,7 @@ header #showtime #p2 {
     text-align: center;
     color: #D1EEEC;
     font-size: 1.25rem;
+    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box #traceno {
@@ -736,9 +734,10 @@ header #showtime #p2 {
     display: flex;
     flex-direction: column;
     color: #fff;
+    letter-spacing: 2px;
     font-size: 0.875rem;
+    font-family: Trebuchet-ms;
     text-align: center;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -760,6 +759,7 @@ header #showtime #p2 {
     left: 3.125rem;
     color: #A7A8CD;
     font-size: 1rem;
+    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box #traceend {
@@ -768,6 +768,7 @@ header #showtime #p2 {
     right: 3.125rem;
     color: #A7A8CD;
     font-size: 1rem;
+    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box hr {
@@ -783,6 +784,7 @@ header #showtime #p2 {
     left: 3.125rem;
     color: #D1EEEC;
     font-size: 1rem;
+    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box div #rightbottom {
@@ -790,6 +792,7 @@ header #showtime #p2 {
     right: 2.8125rem;
     bottom: 1.875rem;
     font-size: 0.8125rem;
+    font-family: Trebuchet-ms;
     line-height: 1.375rem;
     text-align: right;
     color: #8D808F;
@@ -806,7 +809,6 @@ header #showtime #p2 {
         font-size: 36px !important;
     }
 }
-
 
 @media screen and (max-width: 560px) {
     html {

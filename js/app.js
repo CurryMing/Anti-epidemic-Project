@@ -249,7 +249,7 @@ var rumorData = [
         "date": "2020-09-15",
         "title": "9月13日全国新增49名新冠确诊病例，分布多省市",
         "explain": "谣言",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/ccniumVHEPYdE41NyrneXB?imageView2/2/w/150/h/90",
+        "imgsrc": "images/ccniumVHEPYdE41NyrneXB.jfif",
         "markstyle": "fake",
         "url": "https://vp.fact.qq.com/article?id=7c47a1e932ab4a0ad72ba92294b99245",
         "desc": "网传视频中混淆了无症状感染者和确诊病例的概念，将两者简单相加得出了“新增49名病例”的结论，实际上，49名病例中有39名为无症状感染者，无症状感染者不是确诊病例。\n9月13日的新增确诊病例和无症状感染者均为境外输入。境外入境人员检测、隔离14天的规定一直没变过，所有入境人员从入境到卫生检疫、检测、转运全部是按照规定实行无缝对接和闭环管理，并没有进入社会，确诊患者已分布在全国多地的说法不属实。",
@@ -260,7 +260,7 @@ var rumorData = [
         "date": "2020-09-10",
         "title": "新冠肺炎男性患者的死亡率更高",
         "explain": "确实如此",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/2umhxZmfhc2AdEJZwp7xdA?imageView2/2/w/150/h/90",
+        "imgsrc": "images/2umhxZmfhc2AdEJZwp7xdA.jfif",
         "markstyle": "true",
         "url": "https://vp.fact.qq.com/article?id=60df9d85d6bfa16c628dc3549cded1ff",
         "desc": "最近发表于《自然》杂志的一篇论文对男性患者更易因感染新冠而死亡这个问题进行了解释。其中指出，男性患者在感染新冠初期，体内多种免疫细胞因子的表达水平显著高于女性患者，“细胞因子风暴”导致的肺部组织损伤可能是男性重症患者死亡率更高的原因之一。\n科研人员发现的第二个现象是女性对于新冠病毒可以产生更强的免疫反应，在女性感染者体内，最终T细胞的激活和活性都显著的高于男性患者。在此研究的基础上，针对男女患者对于新冠的不同反应，医护人员可以在治疗时采取更加针对的治疗方法，增强治疗效果。",
@@ -271,7 +271,7 @@ var rumorData = [
         "date": "2020-09-09",
         "title": "新冠死者平均只损失了几个月的寿命",
         "explain": "谣言",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/8q9yQ3Cnw84UQkGiCX8Ez3?imageView2/2/w/150/h/90",
+        "imgsrc": "images/8q9yQ3Cnw84UQkGiCX8Ez3.png",
         "markstyle": "fake",
         "url": "https://vp.fact.qq.com/article?id=96bc42ee0e4e6c96bef3d0df5d42345f",
         "desc": "认为“只损失数月寿命”的人，是犯了数学上的错误。对在美国业已成功活到78岁的老人来说，其预期寿命并不是78.8岁，而是男性87.8岁，女性89.3岁。也就是说，假如他/她在78岁时因新冠死亡，又没有其它特殊情况，那就会遭受大约10年的寿命损失。",
@@ -282,7 +282,7 @@ var rumorData = [
         "date": "2020-08-29",
         "title": "人类可能无法对新冠病毒获得持久的免疫保护",
         "explain": "确实如此",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/mEpZzJ1yAx41ARpFCDwirk?imageView2/2/w/150/h/90",
+        "imgsrc": "images/mEpZzJ1yAx41ARpFCDwirk.jfif",
         "markstyle": "true",
         "url": "https://vp.fact.qq.com/article?id=343da72d4a0f61b5bf14b2bc58f0c968",
         "desc": "麻疹病毒抗体的半衰期很长，只要感染过或接种过疫苗，人体就能持久地产生抗体，这是获得终身免疫的关键。\n流感病毒抗体半衰期较短，只有半年。而且由于流感病毒的种类太多，基因型容易因病毒株间基因交换而出现重大突变，导致免疫保护完全失效，造成大流感。\n有研究表明新冠病毒抗体的半衰期很短，所以我们不太可能对新冠病毒获得持久的免疫保护。但好在目前其亚型少，也还未发生重大突变，人体内还有细胞免疫反应，也许可以一定程度上抵挡新一轮的病毒感染。",
@@ -293,7 +293,7 @@ var rumorData = [
         "date": "2020-08-28",
         "title": "警犬能够准确闻出感染新冠的人",
         "explain": "尚无定论",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/mCrHa1h7SeafYjP1Az2s1r?imageView2/2/w/150/h/90",
+        "imgsrc": "images/mCrHa1h7SeafYjP1Az2s1r.jfif",
         "markstyle": "doubt",
         "url": "https://vp.fact.qq.com/article?id=26269c39baf75de8737ef839f43e0bca",
         "desc": "研究表明，训练后，狗确实可以嗅出来自新冠患者的唾液样本，且准确率还不差。但在机场，检测犬主要是用来找出无症状感染者。如已经有发烧症状，机场使用额温枪或额温检测设备就可以快速进行排查，没必要用检测犬。但是，目前所报道的实验数据里，都没有明确说明检测犬是否能查出来自无症状感染者的样本，它们很有可能无法发现无症状感染者。\n检测犬能检测少量的样本，不能保证对大量样本进行检测的工作。此外，用来这些狗狗同样有感染新冠的风险。所以检测犬上岗的可靠性存疑，狗狗的安全也是需要考虑的因素。",
@@ -304,7 +304,7 @@ var rumorData = [
         "date": "2020-08-26",
         "title": "香港新冠“二次感染”病例意味着群体免疫可能无效",
         "explain": "确实如此",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/vNDDC5EKwNkB8TFM29QTeY?imageView2/2/w/150/h/90",
+        "imgsrc": "images/vNDDC5EKwNkB8TFM29QTeY.jfif",
         "markstyle": "true",
         "url": "https://vp.fact.qq.com/article?id=33c1d15df0f1a82864427b100aa24f0c",
         "desc": "该香港病例为全球首例康复后二次感染新冠病毒的病例。“二次感染”不是“复阳”，因为该患者第一次和第二次感染的病毒株基因序列并不相同。\n患者为何会二次感染？至少有两种猜测：ADE效应使得患者感染新的病毒株后不能有效抵抗，使病情更加严重。另一原因就是抗体在体内的消失，即患者体内的抗体无法存在很久，导致新的病毒来袭时，患者对它是不设防的。\n该“二次感染”病例提示我们：群体免疫可能是无效的，我们已经无法根除新冠，需要与其长期共存了。其次，疫苗可能无法提供终生保护，我们要通过反复注射来加强免疫，这对疫苗的需求量将更大。虽然当前的“二次感染”病例只是孤例，但这警示新冠康复者也需要保持足够的防疫意识。",
@@ -315,7 +315,7 @@ var rumorData = [
         "date": "2020-08-20",
         "title": "印度卫生部长检查基层防疫，不戴口罩者直接扇嘴巴",
         "explain": "谣言",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/o2V6Xz1YUd2uTXgCZFcvUZ?imageView2/2/w/150/h/90",
+        "imgsrc": "images/7tJ7zKNSRcPN2SumvWkVwj.jfif",
         "markstyle": "fake",
         "url": "https://vp.fact.qq.com/article?id=aa1530d3d81b7eae8289853752d2da59",
         "desc": "视频中男子手持话筒上街的肢体动作有些夸张，而卫生部长检查基层防疫本应是严肃的事情，视频让人生疑。\n根据央视新闻对印度卫生部长哈什·瓦尔丹（Harsh Vardhan）的图片报道，与网传视频中男子图片比对后，可以肯定视频中的男子并非印度卫生部长。网络辟谣举报平台记者注意到，网传视频原始出处来自YouTube上《24 News HD》2020年7月24日上传的喜剧类节目，拿着话筒男子系巴基斯坦节目的主持人Sajjad Janni。",
@@ -326,7 +326,7 @@ var rumorData = [
         "date": "2020-08-19",
         "title": "大数据显示，新冠并没有造成更多人死亡",
         "explain": "谣言",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/7tJ7zKNSRcPN2SumvWkVwj?imageView2/2/w/150/h/90",
+        "imgsrc": "images/syDkMCEWzApcypBsrhj1nd.png",
         "markstyle": "fake",
         "url": "https://vp.fact.qq.com/article?id=52a7cb98ec05cb2dcd682d8730fdf277",
         "desc": "作者提供的每一个图表或说法，都有离谱的错误或编造的痕迹。实际上，疫情期间美国总死亡人数比正常年份高出了15%以上。\n作者宣称“英国死亡人数无异常”，实际上错误解读了数据。根据英国权威媒体统计，在疫情高峰期，英国的死亡率上升了45%。\n流传文章关于美国这部分，很大程度其实是翻译改写自一篇不靠谱的美国博客文章——除了宣扬错误数据和结论外，还拒绝疫苗。而中文译者在原文的基础上以个人喜好加上了诸多离谱想象。\n作者宣称瑞典在社会运转如常的情况下，取得了理想的防疫成绩。实际上：瑞典是欧洲最后一批走出疫情的国家；瑞典并非不检测、不隔离、不收治；瑞典的新冠死亡率在国情类似的北欧国家中显得非常高。",
@@ -337,7 +337,7 @@ var rumorData = [
         "date": "2020-08-18",
         "title": "普京女儿注射疫苗后高烧不治身亡",
         "explain": "谣言",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/syDkMCEWzApcypBsrhj1nd?imageView2/2/w/150/h/90",
+        "imgsrc": "images/syDkMCEWzApcypBsrhj1nd.png",
         "markstyle": "fake",
         "url": "https://vp.fact.qq.com/article?id=4b2de35c66fdcfd36b8bf3183dec6d73",
         "desc": "俄罗斯Tsargrad电视台网站17日报道称，加拿大媒体“今日多伦多”当日发表了一篇俄罗斯总统普京女儿的所谓“独家新闻”，有关注射新冠疫苗后高烧不治身亡的消息，随后删除了这条假新闻。原文是一篇详细但完全虚假的文章。对于特定读者来说，加拿大网站显然创造了一个骗局。",
@@ -348,29 +348,17 @@ var rumorData = [
         "date": "2020-08-16",
         "title": "新冠病毒会感染中耳组织",
         "explain": "尚无定论",
-        "imgsrc": "//jiaozhen-70111.picnjc.qpic.cn/vK7oWDpbJYG7KBsPpzkTYP?imageView2/2/w/150/h/90",
+        "imgsrc": "images/vK7oWDpbJYG7KBsPpzkTYP.jfif",
         "markstyle": "doubt",
         "url": "https://vp.fact.qq.com/article?id=a15fd960093ece8897fae7c76eeb3699",
         "desc": "近日，发表在《美国医学会杂志·耳鼻喉科-头和颈外科学卷》的一项研究中，科研人员从新冠患者尸体的乳突骨及中耳部位检测到了新冠病毒，说明新冠病毒确实可能出现在患者耳部。\n实验中虽然在中耳检测到了新冠病毒，但并不能得出新冠病毒会感染中耳组织的结论。虽然此前也有个别新冠患者出现听力下降症状的报道，但是具体的原因仍不清楚，还需要进行更多的研究。\n耳部出现新冠病毒提示耳鼻喉科医护人员在手术过程中也需要进行额外的防护。不过耳朵并不和外界进行大量气体或物质交换，也不是病毒进行传播的有效途径，所以我们不必过分担心，也无需针对患者的耳部进行格外防护。",
         "author": "韩越"
     }
 ];
-if (localStorage.getItem("rumorData") != null) {
-    rumorData = JSON.parse(localStorage.getItem("rumorData"));
-}
+// if (localStorage.getItem("rumorData") != null) {
+//     rumorData = JSON.parse(localStorage.getItem("rumorData"));
+// }
 var randomSize = 0;
-var rumorImg = [
-    { imgSrc: "images/ccniumVHEPYdE41NyrneXB.jfif" },
-    { imgSrc: "images/2umhxZmfhc2AdEJZwp7xdA.jfif" },
-    { imgSrc: "images/8q9yQ3Cnw84UQkGiCX8Ez3.png" },
-    { imgSrc: "images/mEpZzJ1yAx41ARpFCDwirk.jfif" },
-    { imgSrc: "images/mCrHa1h7SeafYjP1Az2s1r.jfif" },
-    { imgSrc: "images/vNDDC5EKwNkB8TFM29QTeY.jfif" },
-    { imgSrc: "images/o2V6Xz1YUd2uTXgCZFcvUZ.png" },
-    { imgSrc: "images/7tJ7zKNSRcPN2SumvWkVwj.jfif" },
-    { imgSrc: "images/syDkMCEWzApcypBsrhj1nd.png" },
-    { imgSrc: "images/vK7oWDpbJYG7KBsPpzkTYP.jfif" },
-]
 
 // 同程
 var traceData = [{
@@ -571,8 +559,6 @@ $(document).ready(function () {
     var navRight = $("#navRight");
     var boxMain = $(".box_main");
     var scrollBox = document.getElementById("scroll_box");
-    var main_1 = document.getElementById("main_1");
-    var scrollWidth = main_1.offsetWidth;
     var traceScrollBox = document.getElementById('trace-scroll-box')
 
     // 
@@ -629,16 +615,6 @@ $(document).ready(function () {
     $('#main_3 #trace-box #right-nav').click(function () {
         tracePageNum++;
         let traceScrollBoxLeft = CardMove('right')
-        // $('#trace-scroll-box').animate({
-        //     left: traceScrollBoxLeft - traceScrollWidth
-        // }, 'slow', function () {
-        //     $('#main_3 #trace-box #left-nav').css({
-        //         'display': 'block'
-        //     })
-        //     $('#main_3 #trace-box #right-nav').css({
-        //         'display': 'block'
-        //     })
-        // })
         tween(traceScrollBox, {
             left: traceScrollBoxLeft - traceScrollWidth
         }, 10, function () {
@@ -740,14 +716,13 @@ $(document).ready(function () {
     var h = refreshDate.getHours();
     // 刷新日期不是当天，不可以再次刷新
     if (day !== localStorage.getItem("refreshDay")) {
-        if (h - localStorage.getItem("refreshHours") >= 5) {
+        if (h - localStorage.getItem("refreshHours") >= 2) {
             canRefresh = true;
         } else {
             canRefresh = false;
         }
     }
-    canRefresh = false;
-    console.log("可以刷新？: " + canRefresh);
+    // console.log("可以刷新？: " + canRefresh);
     if (canRefresh) {
         // 获取城市疫情数据
         $.get(
@@ -764,14 +739,14 @@ $(document).ready(function () {
             }
         );
         // 获取谣言数据
-        $.get(
+        /* $.get(
             "http://api.tianapi.com/txapi/rumour/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
             function (data, status) {
+                console.log("22222");
                 rumorData = data.newslist;
-                localStorage.setItem("rumorData", JSON.stringify(rumorData));
-                // saveHandler(rumorData)
+                // localStorage.setItem("rumorData", JSON.stringify(rumorData));
             }
-        );
+        ); */
         //获取疫情同程
         $.get("http://api.tianapi.com/txapi/ncovsame/index?key=c707f6dbaa1b5e751eea380e762b2aa6",
             function (data, status) {
@@ -820,10 +795,8 @@ $(document).ready(function () {
             });
         }, 1000);
     });
-    var startX = 0,
-        startY = 0,
-        endX = 0,
-        endY = 0;
+    var startX = 0
+    var endX = 0
     document.addEventListener("mousedown", function (event) {
         startX = event.clientX;
         startY = event.clientY;
@@ -861,13 +834,13 @@ $(document).ready(function () {
         $("#rumor_title").html(rumorData[index].title);
         $("#rumor_author").html("作者：" + rumorData[index].author);
         $("#rumor_explain").html("说明：" + rumorData[index].explain);
-        var imgSrc = rumorData[index].imgsrc.split("?")[0];
-        imgSrc = rumorImg[index].imgSrc
-        console.log(imgSrc);
-        $("#rumor_img").attr("src", imgSrc);
+        // console.log(rumorData[index].imgsrc);
+
+        rumorData[index].imgsrc = rumorData[index].imgsrc.split("?")[0]
+
+        $("#rumor_img").attr("src", rumorData[index].imgsrc);
         $("#rumor_desc").html("描述：" + rumorData[index].desc);
         $("#rumorInfo").fadeOut(300);
-        // console.log(index);
         $("#rumor_Det").fadeIn(500);
     });
     //   点击关闭谣言详情
@@ -1236,7 +1209,10 @@ function bar(cityArr) {
 // 散布谣言
 function randomRumor() {
     // 遍历谣言数据
-    rumorData.forEach((item) => {
+    rumorData.forEach((item, index) => {
+        if (index >= 10) {
+            return;
+        }
         var rumor_span = document.createElement("span");
         var rumor_i = document.createElement("i");
         rumor_span.innerHTML = item.title; /*+ "    " + posIndex*/
@@ -1267,8 +1243,10 @@ tracequery();
 function tracequery() {
     // 遍历疫情同程信息
     var m = 1;
-    traceData.forEach((item) => {
-
+    traceData.forEach((item, index) => {
+        if (index >= 10) {
+            return;
+        }
         $("#trace-scroll-box div:nth-child(" + m + ") #tracedate").html(item.date);
         $("#trace-scroll-box div:nth-child(" + m + ") #pos_start").html(item.pos_start);
         $("#trace-scroll-box div:nth-child(" + m + ") #pos_end").html(item.pos_end);
@@ -1295,9 +1273,9 @@ function time() {
     var m = dt.getMinutes(); //获取分
     var s = dt.getSeconds(); //获取秒
     $("#showtime #p1").html(
-        y + "年" + todouble(mt) + "月" + todouble(day) + "日"
+        y + " / " + todouble(mt) + " / " + todouble(day) + ""
     );
-    $("#showtime #p2").html(todouble(h) + ":" + todouble(m) + ":" + todouble(s));
+    $("#showtime #p2").html(todouble(h) + " : " + todouble(m) + " : " + todouble(s));
     t = setTimeout(time, 1000); //设定定时器，循环运行
 }
 
