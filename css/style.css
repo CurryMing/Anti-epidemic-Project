@@ -13,11 +13,6 @@
     src: url(../font/Trebuchet\ MS.ttf);
 }
 
-@font-face {
-    font-family: WeiRuanYaHei;
-    src: url(../font/WeiRuanYaHei.ttf);
-}
-
 html,
 body {
     height: 100%;
@@ -31,7 +26,7 @@ html {
 body {
     display: flex;
     position: relative;
-    font-family: WeiRuanYaHei;
+    font-family: "Microsoft Yahei", Trebuchet-ms;
 }
 
 li {
@@ -718,7 +713,6 @@ header #showtime #p2 {
     text-align: center;
     color: #D1EEEC;
     font-size: 1.25rem;
-    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box #pos_end {
@@ -726,7 +720,6 @@ header #showtime #p2 {
     text-align: center;
     color: #D1EEEC;
     font-size: 1.25rem;
-    font-family: Trebuchet-ms;
 }
 
 #trace-scroll-box #traceno {
